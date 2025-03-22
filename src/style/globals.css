@@ -7,12 +7,17 @@
   --color-text-body: #333333;
   --color-text-hover: #0e380e;
   --color-text-action: #145314;
-  --color-icon-primary: #333333;
-  --color-icon-action-hover: #0e380e;
-  --color-border-focus: #145314;
-  --color-button-primary: #0e380e;
+  --color-icon-primary: var(--color-text-body);
+  --color-icon-action-hover: var(--color-text-hover);
+  --color-border-focus: var(--color-text-action);
+  --color-button-primary: var(--color-text-hover);
   --color-button-hover: #071c07;
   --color-button-disable: #cccccc;
-  --color-text-on-action: #ffffff;
+  --color-text-on-action: var(--color-surface_primary);
   --color-text-on-disabled: #4d4d4d;
+  --text-2.5xl: 28px;
+  --color-border-primary: #b3b3b3;
+  --color-text-disable: #999999;
+  --color-border-disabled: var(--color-text-disable);
+  --color-border-hover: #1b6f1b;
 }
