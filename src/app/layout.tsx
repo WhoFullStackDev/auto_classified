@@ -1,12 +1,35 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import localFont from "next/font/local";
 import "../style/globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Container from "@/components/ui/Container";
 
-const latoSans = Lato({
-  weight: ["400", "700", "900"],
-  style: ["normal"],
-  subsets: ["latin"],
+const calibreSans = localFont({
   display: "swap",
+  preload: true,
+  src: [
+    {
+      path: "../../public/Fonts/Calibre-Black.otf",
+      style: "black",
+      weight: "900",
+    },
+    {
+      path: "../../public/Fonts/Calibre-Bold.otf",
+      style: "bold",
+      weight: "700",
+    },
+    {
+      path: "../../public/Fonts/Calibre-Medium.otf",
+      style: "medium",
+      weight: "500",
+    },
+    {
+      path: "../../public/Fonts/Calibre-Regular.otf",
+      style: "regular",
+      weight: "400",
+    },
+  ],
+  variable: "--font-calibre",
 });
 
 export const metadata: Metadata = {
@@ -20,8 +43,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${latoSans.className} antialiased`}>
-      <body>{children}</body>
+    <html lang="en" className={`${calibreSans.variable} antialiased`}>
+      <body className="min-h-dvh bg-surface_page overflow-x-hidden ">
+        <Navbar />
+        <Container className="min-h-dvh">{children}</Container>
+      </body>
     </html>
   );
 }

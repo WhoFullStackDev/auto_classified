@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-surface_page: #e6e6e6;
+  --color-surface_primary: #ffffff;
+  --shadow-soft-lg: "0px 4px 16px 0px rgba(0, 0, 0, 0.20)";
+  --color-text-body: #333333;
+  --color-text-hover: #0e380e;
+  --color-text-action: #145314;
+  --color-icon-primary: #333333;
+  --color-icon-action-hover: #0e380e;
+  --color-border-focus: #145314;
+  --color-button-primary: #0e380e;
+  --color-button-hover: #071c07;
+  --color-button-disable: #cccccc;
+  --color-text-on-action: #ffffff;
+  --color-text-on-disabled: #4d4d4d;
+}
