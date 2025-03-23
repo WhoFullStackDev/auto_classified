@@ -4,16 +4,15 @@ import Container from "../ui/Container";
 const HeroSection = () => {
   return (
     <div
-      className="shrink-0"
       style={{
-        background: `url('/images/Hero.png')`,
+        backgroundImage: `url('/images/Hero.avif')`,
         height: "776px",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
       <Container className="h-full">
-        <div className="h-full flex justify-center items-center flex-col">
+        <div className="h-full flex justify-center items-center flex-col gap-5">
           <h1 className="text-text-on-action font-black text-7xl text-center leading-14 shrink-0">
             Buy & Sell Cars Hassle-Free
           </h1>

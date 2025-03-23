@@ -4,6 +4,7 @@
   --color-surface_page: #e6e6e6;
   --color-surface_primary: #ffffff;
   --shadow-soft-lg: "0px 4px 16px 0px rgba(0, 0, 0, 0.20)";
+  --drop-shadow-soft-lg: "0px 4px 16px 0px rgba(0, 0, 0, 0.20)";
   --color-text-body: #333333;
   --color-text-hover: #0e380e;
   --color-text-action: #145314;
@@ -20,4 +21,33 @@
   --color-text-disable: #999999;
   --color-border-disabled: var(--color-text-disable);
   --color-border-hover: #1b6f1b;
+  --color-success: #228b22;
+}
+
+/* Hide default Swiper arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Left Arrow */
+.swiper-button-prev {
+  background-image: url("/images/FiChevronLeft.svg") !important;
+}
+
+/* Right Arrow */
+.swiper-button-next {
+  background-image: url("/images/FiChevronRight.svg") !important;
 }
