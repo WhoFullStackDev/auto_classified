@@ -23,6 +23,9 @@
   --color-border-hover: #1b6f1b;
   --color-success: #228b22;
   --color-text-heading: #1a1a1a;
+  --color-text-error: #661e1e;
+  --color-surface-disable: var(--color-button-disable);
+  --color-surface-action: #0e380e;
 }
 
 /* Hide default Swiper arrows */
