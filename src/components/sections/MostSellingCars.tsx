@@ -7,7 +7,7 @@ const MostSellingCars = () => {
   return (
     <Container>
       <div className="flex justify-center items-center pt-[120px] gap-4">
-        <h1 className="font-bold text-[40px] leading-[52px]">
+        <h1 className="font-bold text-[40px] leading-[52px] text-text-heading">
           Top-Selling Cars
         </h1>
         <FiTrendingUp className="w-8 h-8 aspect-square text-success" />

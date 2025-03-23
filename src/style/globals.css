@@ -22,6 +22,7 @@
   --color-border-disabled: var(--color-text-disable);
   --color-border-hover: #1b6f1b;
   --color-success: #228b22;
+  --color-text-heading: #1a1a1a;
 }
 
 /* Hide default Swiper arrows */
