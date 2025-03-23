@@ -21,6 +21,7 @@ const MostSellingCarsCarousel = () => {
         modules={[Navigation]}
         className="h-[400px] gap-5 mt-10"
       >
+        {/* TODO: Add skeleton, blur*/}
         <SwiperSlide className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer">
           <Image
             src="/images/Card.avif"
@@ -100,7 +101,7 @@ const MostSellingCarsCarousel = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer">
           <Image
             src="/images/Card.avif"
@@ -140,7 +141,7 @@ const MostSellingCarsCarousel = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer">
           <Image
             src="/images/Card.avif"
@@ -180,7 +181,7 @@ const MostSellingCarsCarousel = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer">
           <Image
             src="/images/Card.avif"
@@ -220,7 +221,7 @@ const MostSellingCarsCarousel = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer">
           <Image
             src="/images/Card.avif"
