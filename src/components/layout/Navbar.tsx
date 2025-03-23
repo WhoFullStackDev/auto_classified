@@ -2,6 +2,7 @@ import { navLinks } from "@/constants/navLink";
 import Container from "../ui/Container";
 import Link from "next/link";
 import { FiBell, FiHeart } from "react-icons/fi";
+import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
@@ -29,9 +30,7 @@ const Navbar = () => {
             <Link href="#" aria-label="Like">
               <FiHeart className="flex justify-center items-center shrink-0 w-6 h-6 text-icon-primary hover:text-icon-action-hover" />
             </Link>
-            <button className="flex justify-center items-center w-[85px] h-10 px-4 py-2 bg-button-primary hover:bg-button-hover  focus:bg-button-hover  shadow-soft-lg disabled:bg-button-disable rounded-sm text-text-on-action font-medium text-base leading-6 shrink-0 disabled:text-text-on-disabled">
-              Login
-            </button>
+            <Button label="Login" />
           </div>
         </div>
       </Container>
