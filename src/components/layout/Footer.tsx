@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../ui/Container";
 import Link from "next/link";
 import Heading from "../ui/Heading";
@@ -23,20 +22,23 @@ const Footer = () => {
             />
             <div className="flex items-center gap-3 ">
               <Link
-                href="#"
+                href="/"
                 className="outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-border-focus rounded-full"
+                aria-label="Visit to Facebook"
               >
                 <FiFacebook className="w-9 h-9 text-icon-primary cursor-pointer hover:text-icon-action-hover focus:hover:text-icon-action-hover" />
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-border-focus   rounded-full"
+                aria-label="Visit to X"
               >
                 <RiTwitterXLine className="w-9 h-9 text-icon-primary cursor-pointer hover:text-icon-action-hover" />
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-border-focus  rounded-full"
+                aria-label="Visit to Instagram"
               >
                 <FiInstagram className="w-9 h-9 text-icon-primary cursor-pointer hover:text-icon-action-hover" />
               </Link>
@@ -47,19 +49,19 @@ const Footer = () => {
               <p className="text-base text-[#666666] leading-5 ">Company</p>
               <div className="flex  flex-col justify-center gap-2">
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Blog
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Careers
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   News
@@ -70,31 +72,31 @@ const Footer = () => {
               <p className="text-base text-[#666666] leading-5">Resources</p>
               <div className="flex  flex-col justify-center gap-2">
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Tools
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Grocery
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Health
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Home
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Jewelry
@@ -105,31 +107,31 @@ const Footer = () => {
               <p className="text-base text-[#666666] leading-5">Platform</p>
               <div className="flex  flex-col justify-center gap-2">
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   New
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Used
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Electric
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Research
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
                 >
                   Sell your car
@@ -149,19 +151,19 @@ const Footer = () => {
           </p>
           <div className="flex item-center gap-5">
             <Link
-              href="#"
+              href="/"
               className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
             >
               Teams of service
             </Link>
             <Link
-              href="#"
+              href="/"
               className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/"
               className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
             >
               Cookie

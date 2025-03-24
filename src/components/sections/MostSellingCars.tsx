@@ -17,6 +17,7 @@ const MostSellingCars = () => {
           type="button"
           className="w-[200px] h-[50px] rounded-xl  font-bold text-base leading-9 text-center "
           label="Find Best Deals "
+          ariaLabel="Find Best Deals"
         />
       </div>
     </Container>

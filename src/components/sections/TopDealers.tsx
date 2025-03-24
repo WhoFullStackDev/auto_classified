@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../ui/Container";
 import Heading from "../ui/Heading";
 import DealerCarousel from "../ui/carousels/DealerCarousel";

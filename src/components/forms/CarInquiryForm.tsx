@@ -8,19 +8,30 @@ const OptionValue = [
 ];
 
 const CarInquiryForm = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log(e);
-  };
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {};
   return (
     <form
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       className="w-[1030px] h-[114px] bg-surface_primary p-8 rounded-[20px] inline-flex items-center gap-6"
     >
-      <Option optionData={OptionValue} name="carType" />
-      <Option optionData={OptionValue} name="manufacture" />
-      <Option optionData={OptionValue} name="model" />
+      <Option
+        optionData={OptionValue}
+        name="carType"
+        ariaLabelledby="carType"
+      />
+      <Option
+        optionData={OptionValue}
+        name="manufacture"
+        ariaLabelledby="manufacture"
+      />
+      <Option optionData={OptionValue} name="model" ariaLabelledby="model" />
       <Input id="zip_code" name="zip_code" placeholder="Zip Code" type="tel" />
-      <Button label="Find Your Car" className="w-[180px]" type="submit" />
+      <Button
+        label="Find Your Car"
+        className="w-[180px]"
+        type="submit"
+        ariaLabel="Find Your Car"
+      />
     </form>
   );
 };

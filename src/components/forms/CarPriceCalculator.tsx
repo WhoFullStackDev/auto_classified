@@ -73,6 +73,7 @@ const CarPriceCalculator = () => {
               optionData={loneTerm}
               {...register("Loan")}
               name="Loan"
+              ariaLabelledby="Loan"
             />
           </div>
           <div>
@@ -97,6 +98,7 @@ const CarPriceCalculator = () => {
               className="border-2 rounded-sm"
               optionData={creditScore}
               name="credit"
+              ariaLabelledby="credit"
             />
           </div>
 
@@ -117,6 +119,7 @@ const CarPriceCalculator = () => {
         <div className="flex justify-center  gap-8">
           <div className=" flex justify-center items-center gap-1 w-[172px]">
             <button
+              aria-label="toggle"
               type="button"
               role="button"
               className={`w-[50px] h-[30px] flex p-[2px] items-center shrink-0 gap-2 rounded-[20px] ${
@@ -153,6 +156,7 @@ const CarPriceCalculator = () => {
       <Button
         label="Get My Match"
         type="submit"
+        ariaLabel="Get My Match"
         className="w-[380px] h-[50px] rounded-2xl mt-6"
       />
     </div>

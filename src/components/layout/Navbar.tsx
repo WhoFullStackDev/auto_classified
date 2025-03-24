@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link href="#" aria-label="Like">
               <FiHeart className="flex justify-center items-center shrink-0 w-6 h-6 text-icon-primary hover:text-icon-action-hover" />
             </Link>
-            <Button type="button" label="Login" />
+            <Button type="button" label="Login" ariaLabel="Login" />
           </div>
         </div>
       </Container>
