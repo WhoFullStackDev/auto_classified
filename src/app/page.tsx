@@ -19,7 +19,6 @@ const page = () => {
       <BrandSection />
       <TopDealers />
       <Testimonial />
-      <div className="pt-10">hrllo</div>{" "}
     </React.Fragment>
   );
 };
