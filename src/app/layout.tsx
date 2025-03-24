@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../style/globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const calibreSans = localFont({
   display: "swap",
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className="min-h-dvh bg-surface_page overflow-x-hidden ">
         <Navbar />
         <div className="min-h-dvh">{children}</div>
+        <Footer />
       </body>
     </html>
   );

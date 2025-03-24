@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <div className="bg-surface_primary h-14 shrink-0 shadow-soft-lg sticky top-0 left-0 z-10">
+    <nav className="bg-surface_primary h-14 shrink-0 shadow-soft-lg sticky top-0 left-0 z-10">
       <Container className="h-full">
         <div className="h-full flex justify-between items-center">
           <Link href="/" className="font-black text-2xl">
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </nav>
   );
 };
 
