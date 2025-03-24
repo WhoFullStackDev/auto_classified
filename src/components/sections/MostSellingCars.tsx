@@ -2,7 +2,7 @@ import { FiTrendingUp } from "react-icons/fi";
 import Container from "../ui/Container";
 import MostSellingCarsCarousel from "../ui/carousels/MostSellingCarsCarousel";
 import Button from "../ui/Button";
-import Heading from "../ui/carousels/Heading";
+import Heading from "../ui/Heading";
 
 const MostSellingCars = () => {
   return (
@@ -14,6 +14,7 @@ const MostSellingCars = () => {
       <MostSellingCarsCarousel />
       <div className="flex justify-center items-center mt-10 ">
         <Button
+          type="button"
           className="w-[200px] h-[50px] rounded-xl  font-bold text-base leading-9 text-center "
           label="Find Best Deals "
         />

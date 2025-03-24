@@ -2,6 +2,7 @@ import CarPriceEstimator from "@/components/sections/CarPriceEstimator";
 import HeroSection from "@/components/sections/HeroSection";
 import MostSellingCars from "@/components/sections/MostSellingCars";
 import Services from "@/components/sections/Services";
+import WhyWe from "@/components/sections/WhyWe";
 import React from "react";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <MostSellingCars />
       <Services />
       <CarPriceEstimator />
+      <WhyWe />
     </React.Fragment>
   );
 };

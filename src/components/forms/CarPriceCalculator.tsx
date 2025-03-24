@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Heading from "../ui/carousels/Heading";
+import Heading from "../ui/Heading";
 import Input from "../ui/Input";
 import Option, { dataStructure } from "../ui/Option";
 import Label from "../ui/Label";
@@ -116,7 +116,9 @@ const CarPriceCalculator = () => {
         </div>
         <div className="flex justify-center  gap-8">
           <div className=" flex justify-center items-center gap-1 w-[172px]">
-            <div
+            <button
+              type="button"
+              role="button"
               className={`w-[50px] h-[30px] flex p-[2px] items-center shrink-0 gap-2 rounded-[20px] ${
                 showInput ? "bg-surface-action" : "bg-surface-disable"
               } relative`}
@@ -130,7 +132,7 @@ const CarPriceCalculator = () => {
                   showInput && "right-0.5"
                 }`}
               ></div>
-            </div>
+            </button>
             <Label title="Include trade-in" className="shrink-0" />
           </div>
           <div>
