@@ -1,6 +1,6 @@
-export const truncateText = (str: string) => {
-  if (str.length < 18) {
+export const truncateText = (str: string, length: number) => {
+  if (str.length < length) {
     return str;
   }
-  return str.substring(0, 18) + "...";
+  return str.substring(0, length) + "...";
 };
