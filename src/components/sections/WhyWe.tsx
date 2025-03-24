@@ -1,4 +1,3 @@
-import React, { lazy } from "react";
 import Heading from "../ui/Heading";
 import Container from "../ui/Container";
 import Image from "next/image";
@@ -22,7 +21,7 @@ const WhyWe = () => {
               Transparent pricing
             </h4>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
-              No surprises here. See how much you'll pay on cars you like.
+              No surprises here. See how much {`you'll`} pay on cars you like.
             </p>
           </div>
           <div className="w-[250px] flex flex-col items-center gap-5">
@@ -52,12 +51,13 @@ const WhyWe = () => {
               Shop your way
             </h4>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
-              Your own pace, your own space. Shop online where and when it's
+              Your own pace, your own space. Shop online where and when {`it's`}
               convenient for you.
             </p>
           </div>
         </div>
         <Button
+          ariaLabel="Why-Login"
           type="button"
           label="Login"
           className="w-[320px] h-[50px] rounded-xl mt-10"
