@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Heading from "../ui/carousels/Heading";
+import Heading from "../ui/Heading";
 import Container from "../ui/Container";
 import CarPriceCalculator from "../forms/CarPriceCalculator";
 
@@ -17,7 +17,7 @@ const CarPriceEstimator = () => {
             alt="Car"
             width={589}
             height={334}
-            priority
+            loading="lazy"
             className="mt-3"
           />
         </div>
