@@ -1,3 +1,4 @@
+import BrandSection from "@/components/sections/BrandSection";
 import CarPriceEstimator from "@/components/sections/CarPriceEstimator";
 import HeroSection from "@/components/sections/HeroSection";
 import MostSellingCars from "@/components/sections/MostSellingCars";
@@ -13,6 +14,7 @@ const page = () => {
       <Services />
       <CarPriceEstimator />
       <WhyWe />
+      <BrandSection />
     </React.Fragment>
   );
 };
