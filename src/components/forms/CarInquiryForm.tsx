@@ -25,7 +25,13 @@ const CarInquiryForm = () => {
         ariaLabelledby="manufacture"
       />
       <Option optionData={OptionValue} name="model" ariaLabelledby="model" />
-      <Input id="zip_code" name="zip_code" placeholder="Zip Code" type="tel" />
+      <Input
+        id="zip_code"
+        name="zip_code"
+        placeholder="Zip Code"
+        type="tel"
+        className="rounded-none border-t-0 border-l-0 border-r-0"
+      />
       <Button
         label="Find Your Car"
         className="w-[180px]"

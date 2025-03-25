@@ -9,7 +9,10 @@ interface inputProps {
   LeftIcon?: IconType;
   RightIcon?: IconType;
   type: string;
+  size?: number;
   defaultValue?: number;
+  value?: number | string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: React.FC<inputProps> = ({
@@ -21,15 +24,13 @@ const Input: React.FC<inputProps> = ({
   RightIcon,
   type,
   defaultValue,
+  onChange,
+  value,
+  size,
   ...props
 }) => {
   return (
-    <div
-      className={cn(
-        "inline-flex justify-center items-center relative w-[172px]",
-        className
-      )}
-    >
+    <div className="inline-flex justify-center items-center relative ">
       {LeftIcon && (
         <LeftIcon className="absolute left-2 top-1/2 transform -translate-y-1/2  text-icon-primary hover:text-icon-action-hover focus:text-icon-action-hover" />
       )}
@@ -39,14 +40,19 @@ const Input: React.FC<inputProps> = ({
         id={id}
         defaultValue={defaultValue}
         placeholder={placeholder}
+        onChange={onChange}
+        value={value}
         className={cn(
-          "w-full px-2 py-2 flex items-center shrink-0 border-b-2 border-border-primary text-text-body hover:border-border-hover focus:outline-border-hover placeholder:text-text-disable disabled:border-border-disabled disabled:text-text-on-disabled font-normal text-base cursor-pointer",
+          "w-[172px] px-2 py-2 flex items-center shrink-0 border-2  rounded-sm border-border-primary text-text-body hover:border-border-hover focus:outline-border-hover placeholder:text-text-disable disabled:border-border-disabled disabled:text-text-on-disabled font-normal text-base cursor-pointe0r",
           className
         )}
         name={name}
       />
       {RightIcon && (
-        <RightIcon className="absolute right-3 top-1/2 transform -translate-y-1/2  text-icon-primary hover:text-icon-action-hover focus:text-icon-action-hover" />
+        <RightIcon
+          className="absolute right-3 top-1/2 transform -translate-y-1/2  text-icon-primary hover:text-icon-action-hover focus:text-icon-action-hover"
+          size={size}
+        />
       )}
     </div>
   );
