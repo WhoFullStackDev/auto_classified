@@ -7,8 +7,8 @@ const TopDealers = () => {
     <Container>
       <div className="mt-[120px] flex flex-col justify-center items-center">
         <Heading text="Feature Dealers" />
-        <DealerCarousel />
       </div>
+      <DealerCarousel />
     </Container>
   );
 };

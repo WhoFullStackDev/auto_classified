@@ -9,45 +9,48 @@ import { truncateText } from "@/lib/truncateText";
 
 const TestimonialCarousel = () => {
   return (
-    <Swiper
-      spaceBetween={20}
-      slidesPerView={3}
-      a11y={{
-        enabled: true,
-        slideLabelMessage: "Slide {{index}}",
-      }}
-      modules={[A11y, Keyboard]}
-      keyboard={{ enabled: true }}
-      className="h-[300px]  mt-10"
-    >
-      {[1, 2, 3, 4, 5].map((num) => (
-        <SwiperSlide
-          className="w-[400px]! h-[300px]! relative rounded-lg overflow-hidden cursor-pointer shadow-soft-lg "
-          key={num}
-          tabIndex={0}
-          aria-label={`Slide ${num}`}
-        >
-          <div className="bg-surface_primary h-full p-5 flex flex-col justify-between">
-            <div className="flex  items-center gap-1">
-              <Image
-                src="/images/Comma 1.svg"
-                alt="Comma"
-                width={14}
-                height={30}
-                loading="lazy"
-              />
-              <Image
-                src="/images/Comma 1.svg"
-                alt="Comma"
-                width={14}
-                height={30}
-                loading="lazy"
-              />
-            </div>
-            <div className="flex justify-center items-center ">
-              <p className="text-text-body text-base font-normal leading-6  w-[300px] h-full overflow-hidden">
-                {truncateText(
-                  `  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex
+    <div>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={3}
+        a11y={{
+          enabled: true,
+          slideLabelMessage: "Slide {{index}}",
+        }}
+        modules={[A11y, Keyboard]}
+        keyboard={{ enabled: true }}
+        className="h-[300px]  mt-10"
+      >
+        {[1, 2, 3, 4, 5].map((num) => (
+          <SwiperSlide
+            className="w-[400px]! h-[300px]! relative rounded-lg overflow-hidden cursor-pointer shadow-soft-lg"
+            key={num}
+            tabIndex={0}
+            aria-label={`Slide ${num}`}
+          >
+            <div className="bg-surface_primary h-full p-5 flex flex-col justify-between">
+              <div className="flex  items-center gap-1">
+                <Image
+                  src="/images/Comma 1.svg"
+                  alt="Comma"
+                  width={14}
+                  height={30}
+                  loading="lazy"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <Image
+                  src="/images/Comma 1.svg"
+                  alt="Comma"
+                  width={14}
+                  height={30}
+                  loading="lazy"
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </div>
+              <div className="flex justify-center items-center ">
+                <p className="text-text-body text-base font-normal leading-6  w-[300px] h-full overflow-hidden">
+                  {truncateText(
+                    `  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex
               saepe perspiciatis recusandae assumenda, corporis accusamus ad
               quos architecto! Beatae architecto porro mollitia nemo enim,
               laborum tempora. Quas illo fugit commodi quidem esse voluptatum
@@ -84,43 +87,46 @@ const TestimonialCarousel = () => {
               exercitationem quos laudantium, ad facere eos at fugiat iste quam
               culpa, pariatur qui sequi? Cumque quas dignissimos aliquid libero
               soluta nobis!`,
-                  240
-                )}
-              </p>
+                    240
+                  )}
+                </p>
+              </div>
+              <div className="flex items-center justify-end gap-1">
+                <Image
+                  src="/images/Comma 4.svg"
+                  alt="Comma"
+                  width={14}
+                  height={30}
+                  loading="lazy"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <Image
+                  src="/images/Comma 4.svg"
+                  alt="Comma"
+                  width={14}
+                  height={30}
+                  loading="lazy"
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </div>
+              <div className="flex items-center gap-1">
+                <Image
+                  src="/images/Person1.avif"
+                  alt="avif"
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  className="rounded-full"
+                />
+                <p className="text-text-body text-base font-normal leading-6 overflow-hidden">
+                  Jani
+                </p>
+              </div>
             </div>
-            <div className="flex items-center justify-end gap-1">
-              <Image
-                src="/images/Comma 4.svg"
-                alt="Comma"
-                width={14}
-                height={30}
-                loading="lazy"
-              />
-              <Image
-                src="/images/Comma 4.svg"
-                alt="Comma"
-                width={14}
-                height={30}
-                loading="lazy"
-              />
-            </div>
-            <div className="flex items-center gap-1">
-              <Image
-                src="/images/Person1.avif"
-                alt="avif"
-                width={48}
-                height={48}
-                loading="lazy"
-                className="rounded-full"
-              />
-              <p className="text-text-body text-base font-normal leading-6 overflow-hidden">
-                Jani
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

@@ -6,10 +6,10 @@ import BrandCarousel from "../ui/carousels/BrandCarousel";
 const BrandSection = () => {
   return (
     <Container>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex justify-center items-center">
         <Heading text="Shop your favourite brand" className="mt-[120px]" />
-        <BrandCarousel />
       </div>
+      <BrandCarousel />
     </Container>
   );
 };
