@@ -16,6 +16,7 @@ const WhyWe = () => {
               width={196}
               height={130}
               loading="lazy"
+              style={{ width: "auto", height: "auto" }}
             />
             <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9 text-nowrap">
               Transparent pricing
@@ -31,6 +32,7 @@ const WhyWe = () => {
               width={196}
               height={130}
               loading="lazy"
+              style={{ width: "auto", height: "auto" }}
             />
             <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9">
               Minutes, not hours
@@ -45,6 +47,7 @@ const WhyWe = () => {
               alt="shop-your-way"
               width={196}
               height={130}
+              style={{ width: "auto", height: "auto" }}
               loading="lazy"
             />
             <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9">
