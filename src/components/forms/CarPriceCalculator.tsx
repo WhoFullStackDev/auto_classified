@@ -85,7 +85,6 @@ const CarPriceCalculator = () => {
               name="down payment"
               defaultValue={3000}
               placeholder="3,000"
-              className="border border-border-primary rounded-sm block"
             />
             <InputError error="hrr" />
           </div>
@@ -111,7 +110,6 @@ const CarPriceCalculator = () => {
               name="monthly payment"
               defaultValue={500}
               placeholder="500"
-              className="border border-border-primary rounded-sm block"
             />
             <InputError error="hrr" />
           </div>
@@ -146,9 +144,7 @@ const CarPriceCalculator = () => {
               name="trade"
               defaultValue={0}
               placeholder="0"
-              className={`border border-border-primary rounded-sm block ${
-                showInput ? "visible" : "invisible"
-              }`}
+              className={` ${showInput ? "visible" : "invisible"}`}
             />
           </div>
         </div>
