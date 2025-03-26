@@ -1,16 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { FiCalendar, FiHeart } from "react-icons/fi";
 import { SlSpeedometer } from "react-icons/sl";
 import { TbManualGearbox } from "react-icons/tb";
 
 const SearchView = () => {
-  const query = useSearchParams();
-  const search = query.get("q");
-  console.log(search);
   return (
     <div className="grid grid-cols-4 justify-center gap-5">
       {[
@@ -23,10 +17,7 @@ const SearchView = () => {
           <div className="absolute w-fit h-fit justify-center items-center flex px-2  bg-surface_primary rounded-lg  top-3 left-3">
             <small className="text-text-body">Sponsor</small>
           </div>
-          <button
-            className="absolute w-fit h-fit justify-center items-center flex p-2  bg-surface_primary rounded-full  top-3 right-3 cursor-pointer "
-            onClick={() => console.log("Hello")}
-          >
+          <button className="absolute w-fit h-fit justify-center items-center flex p-2  bg-surface_primary rounded-full  top-3 right-3 cursor-pointer ">
             <FiHeart />
           </button>
           <Link href="/">

@@ -76,3 +76,12 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #0e380e;
 }
+
+#range-slider-yellow .range-slider__range {
+  background: #228b22;
+  transition: height 0.3s;
+}
+#range-slider-yellow .range-slider__thumb {
+  background: #228b22;
+  transition: transform 0.3s;
+}

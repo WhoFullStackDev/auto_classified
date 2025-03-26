@@ -1,3 +1,5 @@
+import { dataStructure } from "@/components/ui/Option";
+
 interface CalculateEstimateBudget {
   terms: number; // Loan term in years
   creditScore: string;
@@ -45,3 +47,24 @@ export const calculateEstimateBudget = ({
 
   return Math.round(Number(totalBudget.toFixed(2)));
 };
+
+export const allYear = () => {
+  const currentYear = new Date().getFullYear();
+  return Array.from({ length: 200 }, (_, i) => {
+    const year = currentYear - i;
+    return { value: year, label: year.toString() };
+  });
+};
+
+export const loneTerm: dataStructure[] = [
+  { value: 3, label: "3 year" },
+  { value: 5, label: "5 year" },
+  { value: 7, label: "7 year" },
+];
+
+export const creditScore: dataStructure[] = [
+  { value: "500-600", label: "500-600" },
+  { value: "600-700", label: "600-700" },
+  { value: "700-800", label: "700-800" },
+  { value: "800-900", label: "800-900" },
+];

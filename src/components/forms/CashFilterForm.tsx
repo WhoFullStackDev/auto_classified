@@ -1,47 +1,65 @@
-import { useState } from "react";
+"use client";
+
 import Input from "../ui/Input";
 import Label from "../ui/Label";
+import { useForm } from "react-hook-form";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+
+interface IFormValue {
+  startPrice: number;
+  endPrice: number;
+  priceDrop: boolean | string;
+}
 
 const CashFilterForm = () => {
-  const [maxValue, setMaxValue] = useState<number>(34000);
+  const { register, watch, setValue } = useForm<IFormValue>({
+    defaultValues: {
+      startPrice: 0,
+      endPrice: 100000,
+      priceDrop: false,
+    },
+  });
+
+  const startPrice = watch("startPrice");
+  const endPrice = watch("endPrice");
+
   return (
     <form className="justify-center flex flex-col gap-4">
       <div className="justify-between items-center flex gap-2">
         <Input
-          name="start-price"
           placeholder="0"
           type="tel"
           className="w-[120px] border-2"
-          defaultValue={0}
+          {...register("startPrice")}
+          value={startPrice}
         />
-        <p className="text-text-body text-base font-medium leading-5">To</p>
+        <p className="text-text-disable text-base font-medium leading-5">To</p>
         <Input
-          name="end-price"
           placeholder="0"
           type="tel"
           className="w-[120px] border-2"
-          onChange={(e) => {
-            const newValue = Number(e.target.value);
-            setMaxValue(newValue);
-          }}
-          value={maxValue}
+          {...register("endPrice")}
+          value={endPrice}
         />
       </div>
-      <input
-        type="range"
-        name="price-range"
-        min="0"
-        max="100000"
-        defaultValue={maxValue}
-        onChange={(e) => setMaxValue(Number(e.target.value))}
+      <RangeSlider
+        id="range-slider-yellow"
+        min={0}
+        max={100000}
+        value={[startPrice, endPrice]}
+        onInput={(value) => {
+          setValue("startPrice", value[0]);
+          setValue("endPrice", value[1]);
+        }}
       />
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Input
-            name="price-drop"
-            placeholder="price-drop"
+            {...register("priceDrop")}
             type="checkbox"
-            className="scale-[1.5] w-3 h-3"
+            value="price drop"
+            className="scale-[1.5] w-3 h-3  accent-success"
           />
           <Label title="Price drop" />
         </div>

@@ -9,6 +9,8 @@ interface OptionProps {
   optionData: dataStructure[];
   name: string;
   ariaLabelledby: string;
+  defaultOPtionNeed?: boolean;
+  defaultOptionText?: string;
 }
 
 const Option: React.FC<OptionProps> = ({
@@ -16,6 +18,8 @@ const Option: React.FC<OptionProps> = ({
   optionData,
   name,
   ariaLabelledby,
+  defaultOPtionNeed,
+  defaultOptionText,
   ...props
 }) => {
   return (
@@ -28,6 +32,9 @@ const Option: React.FC<OptionProps> = ({
       )}
       name={name}
     >
+      {defaultOPtionNeed && (
+        <option className="hidden">{defaultOptionText}</option>
+      )}
       {optionData &&
         optionData.map((Item, index) => (
           <option key={index} value={Item.value}>

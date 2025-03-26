@@ -1,39 +1,50 @@
+"use client";
 import React from "react";
 import Label from "../ui/Label";
 import Input from "../ui/Input";
-import Option, { dataStructure } from "../ui/Option";
+import Option from "../ui/Option";
 import Button from "../ui/Button";
+import { calculateEstimateBudget, creditScore, loneTerm } from "@/lib/utils";
+import { useForm } from "react-hook-form";
 
-const loneTerm: dataStructure[] = [
-  { value: 3, label: "3 year" },
-  { value: 5, label: "5 year" },
-  { value: 7, label: "7 year" },
-];
-
-const creditScore: dataStructure[] = [
-  { value: "500-600", label: "500-600" },
-  { value: "600-700", label: "600-700" },
-  { value: "700-800", label: "700-800" },
-  { value: "800-900", label: "800-900" },
-];
+interface FinanceFilterIFormValue {
+  monthlyPayment: number;
+  downPayment: number;
+  creditScore: string;
+  loanTerms: number;
+}
 
 const FinanceFilter = () => {
+  const { register, watch } = useForm<FinanceFilterIFormValue>({
+    defaultValues: {
+      creditScore: "500-600",
+      downPayment: 3000,
+      loanTerms: 3,
+      monthlyPayment: 500,
+    },
+  });
+
+  const estimatePrice = calculateEstimateBudget({
+    creditScore: watch("creditScore"),
+    downPayment: Number(watch("downPayment")),
+    monthlyPayment: watch("monthlyPayment"),
+    terms: watch("loanTerms"),
+  });
   return (
     <form className="flex flex-col gap-4 justify-center">
       <div>
         <Label title="Monthly payment" />
         <Input
-          name="monthly"
+          {...register("monthlyPayment")}
           placeholder="500"
           type="tel"
           className="w-[300px]"
         />
       </div>
       <div>
-        {" "}
         <Label title="Down payment" />
         <Input
-          name="down"
+          {...register("downPayment")}
           placeholder="3000"
           type="tel"
           className="w-[300px]"
@@ -45,7 +56,7 @@ const FinanceFilter = () => {
           // {...register("credit")}
           className="border-2 rounded-sm w-[300px]"
           optionData={creditScore}
-          name="credit"
+          {...register("creditScore")}
           ariaLabelledby="credit"
         />
       </div>
@@ -54,8 +65,7 @@ const FinanceFilter = () => {
         <Option
           className="border-2 rounded-sm w-[300px]"
           optionData={loneTerm}
-          // {...register("Loan")}
-          name="Loan"
+          {...register("loanTerms")}
           ariaLabelledby="Loan"
         />
       </div>
@@ -65,13 +75,13 @@ const FinanceFilter = () => {
           Est. buying power
         </p>
         <h6 className="text-text-heading text-[20px] font-bold leading-7">
-          $24,789
+          ${estimatePrice}
         </h6>
       </div>
       <Button
         ariaLabel="buying-power"
         label="Shop by buying power"
-        type="submit"
+        type="button"
         className="w-[300px]"
       />
       <div className="flex justify-between items-center">
