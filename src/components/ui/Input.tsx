@@ -2,8 +2,8 @@ import { cn } from "@/lib/cn";
 import { IconType } from "react-icons";
 
 interface inputProps {
-  placeholder: string;
-  name: string;
+  placeholder?: string;
+  name?: string;
   id?: string;
   className?: string;
   LeftIcon?: IconType;
@@ -12,6 +12,7 @@ interface inputProps {
   size?: number;
   defaultValue?: number;
   value?: number | string;
+  checked?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -27,6 +28,7 @@ const Input: React.FC<inputProps> = ({
   onChange,
   value,
   size,
+  checked,
   ...props
 }) => {
   return (
@@ -38,6 +40,7 @@ const Input: React.FC<inputProps> = ({
         {...props}
         type={type}
         id={id}
+        checked={checked}
         defaultValue={defaultValue}
         placeholder={placeholder}
         onChange={onChange}

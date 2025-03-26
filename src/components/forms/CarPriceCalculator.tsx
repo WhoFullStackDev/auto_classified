@@ -2,25 +2,12 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../ui/Heading";
 import Input from "../ui/Input";
-import Option, { dataStructure } from "../ui/Option";
+import Option from "../ui/Option";
 import Label from "../ui/Label";
 import InputError from "../ui/InputError";
 import Button from "../ui/Button";
 import { useForm } from "react-hook-form";
-import { calculateEstimateBudget } from "@/lib/utils";
-
-const loneTerm: dataStructure[] = [
-  { value: 3, label: "3 year" },
-  { value: 5, label: "5 year" },
-  { value: 7, label: "7 year" },
-];
-
-const creditScore: dataStructure[] = [
-  { value: "500-600", label: "500-600" },
-  { value: "600-700", label: "600-700" },
-  { value: "700-800", label: "700-800" },
-  { value: "800-900", label: "800-900" },
-];
+import { calculateEstimateBudget, creditScore, loneTerm } from "@/lib/utils";
 
 const CarPriceCalculator = () => {
   const [showInput, setShowInput] = useState<boolean>(false);
