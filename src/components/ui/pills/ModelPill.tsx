@@ -6,7 +6,7 @@ import { IoLogoModelS } from "react-icons/io";
 import { useForm } from "react-hook-form";
 
 const ModelPill = () => {
-  const { watch, register } = useForm();
+  const { register } = useForm();
   return (
     <FilterPill Icon={IoLogoModelS} title="Models">
       <div className="h-[300px] overflow-y-scroll">
