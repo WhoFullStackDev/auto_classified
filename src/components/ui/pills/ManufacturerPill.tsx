@@ -6,7 +6,7 @@ import Label from "../Label";
 import { useForm } from "react-hook-form";
 
 const ManufacturerPill = () => {
-  const { watch, register } = useForm();
+  const { register } = useForm();
 
   return (
     <FilterPill Icon={MdOutlinePrecisionManufacturing} title="Manufacturer">

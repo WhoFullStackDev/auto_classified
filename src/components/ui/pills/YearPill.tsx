@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 const YearPill = () => {
   const years = allYear();
-  const { watch, register } = useForm();
+  const { register } = useForm();
 
   return (
     <FilterPill Icon={FiCalendar} title="Year">
