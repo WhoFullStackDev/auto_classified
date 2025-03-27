@@ -6,21 +6,26 @@ import Option from "../ui/Option";
 import Button from "../ui/Button";
 import { calculateEstimateBudget, creditScore, loneTerm } from "@/lib/utils";
 import { useForm } from "react-hook-form";
+import RangeSlider from "react-range-slider-input";
 
 interface FinanceFilterIFormValue {
   monthlyPayment: number;
   downPayment: number;
   creditScore: string;
   loanTerms: number;
+  endMillage: number;
+  startMillage: number;
 }
 
 const FinanceFilter = () => {
-  const { register, watch } = useForm<FinanceFilterIFormValue>({
+  const { register, watch, setValue } = useForm<FinanceFilterIFormValue>({
     defaultValues: {
       creditScore: "500-600",
       downPayment: 3000,
       loanTerms: 3,
       monthlyPayment: 500,
+      endMillage: 2000000,
+      startMillage: 0,
     },
   });
 
@@ -30,8 +35,11 @@ const FinanceFilter = () => {
     monthlyPayment: watch("monthlyPayment"),
     terms: watch("loanTerms"),
   });
+
+  const startMillage = watch("startMillage");
+  const endMillage = watch("endMillage");
   return (
-    <form className="flex flex-col gap-4 justify-center">
+    <form className="flex flex-col gap-4 justify-center ">
       <div>
         <Label title="Monthly payment" />
         <Input
@@ -102,6 +110,38 @@ const FinanceFilter = () => {
       <p className="text-text-body text-base font-normal leading-6 self-stretch ">
         See vehicles with price drops in the past 30 days
       </p>
+      <div className="flex justify-center gap-4 flex-col">
+        <Label title="Millage" />
+        <div className="justify-between items-center flex gap-2">
+          <Input
+            placeholder="0"
+            type="tel"
+            className="w-[120px] border-2"
+            {...register("startMillage")}
+            value={startMillage}
+          />
+          <p className="text-text-disable text-base font-medium leading-5">
+            To
+          </p>
+          <Input
+            placeholder="0"
+            type="tel"
+            className="w-[120px] border-2"
+            {...register("endMillage")}
+            value={endMillage}
+          />
+        </div>
+        <RangeSlider
+          id="range-slider-green"
+          min={0}
+          max={2000000}
+          value={[startMillage, endMillage]}
+          onInput={(value) => {
+            setValue("startMillage", value[0]);
+            setValue("endMillage", value[1]);
+          }}
+        />
+      </div>
     </form>
   );
 };

@@ -16,9 +16,23 @@ const fuelOptions: OptionsType[] = [
   { label: "CNG", icon: GiGasStove, quantity: 30 },
   { label: "Hydrogen", icon: FaDroplet, quantity: 30 },
 ];
-const FuelDropdown = () => {
+
+interface FuelDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const FuelDropdown: React.FC<FuelDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Fuel Type">
+    <ExpendableMenu
+      Label="Fuel Type"
+      tag="Fuel"
+      setOpenDropdownTag={setOpenDropdownTag}
+      openDropdownTag={openDropdownTag}
+    >
       <FilterCheckBoxOption options={fuelOptions} ToggleText="All Fuel Type" />
     </ExpendableMenu>
   );

@@ -10,9 +10,22 @@ const DriveTypeOption: OptionsType[] = [
   { label: "Unknown", quantity: 0 },
 ];
 
-const DriveTypeDropdown = () => {
+interface DriveTypeDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const DriveTypeDropdown: React.FC<DriveTypeDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Drive Type">
+    <ExpendableMenu
+      Label="Drive Type"
+      tag="Drive"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         ToggleText="All Drive Type"
         options={DriveTypeOption}

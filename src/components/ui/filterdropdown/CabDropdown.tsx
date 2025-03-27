@@ -8,9 +8,22 @@ const CabTypeOption: OptionsType[] = [
   { label: "Regular Cab", quantity: 62467 },
 ];
 
-const CabDropdown = () => {
+interface CabDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const CabDropdown: React.FC<CabDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Cab Type">
+    <ExpendableMenu
+      Label="Cab Type"
+      tag="Cab"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         ToggleText="All Cab Type "
         options={CabTypeOption}

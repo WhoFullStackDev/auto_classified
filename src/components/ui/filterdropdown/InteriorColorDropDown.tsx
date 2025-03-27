@@ -26,9 +26,22 @@ const InteriorColorOption: OptionsType[] = [
   { label: "Unknown", quantity: 6, icon: MdOutlineBlock },
 ];
 
-const InteriorColorDropDown = () => {
+interface InteriorColorDropDownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const InteriorColorDropDown: React.FC<InteriorColorDropDownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Interior Colors">
+    <ExpendableMenu
+      Label="Interior Colors"
+      tag="Interior"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         ToggleText="All Interior Colors "
         options={InteriorColorOption}

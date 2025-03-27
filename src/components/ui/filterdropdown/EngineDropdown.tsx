@@ -18,9 +18,22 @@ const EngineOption: OptionsType[] = [
   { label: "Unknown", quantity: 62467 },
 ];
 
-const EngineDropdown = () => {
+interface EngineDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const EngineDropdown: React.FC<EngineDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Engine Type">
+    <ExpendableMenu
+      Label="Engine Type"
+      tag="Engine"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption ToggleText="All Engine " options={EngineOption} />
     </ExpendableMenu>
   );

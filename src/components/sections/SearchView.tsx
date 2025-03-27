@@ -17,7 +17,10 @@ const SearchView = () => {
           <div className="absolute w-fit h-fit justify-center items-center flex px-2  bg-surface_primary rounded-lg  top-3 left-3">
             <small className="text-text-body">Sponsor</small>
           </div>
-          <button className="absolute w-fit h-fit justify-center items-center flex p-2  bg-surface_primary rounded-full  top-3 right-3 cursor-pointer ">
+          <button
+            className="absolute w-fit h-fit justify-center items-center flex p-2  bg-surface_primary rounded-full  top-3 right-3 cursor-pointer "
+            aria-label="like"
+          >
             <FiHeart />
           </button>
           <Link href="/">
@@ -27,16 +30,16 @@ const SearchView = () => {
               priority
               width={295}
               height={197}
-              className="shrink-0 aspect-[295/197]"
+              className="shrink-0"
             />
             <div className="p-3 flex flex-col justify-center gap-2">
-              <h6 className="truncate text-xl leading-7 font-bold text-text-heading">
+              <h2 className="truncate text-xl leading-7 font-bold text-text-heading">
                 Renault Kwid Outsider 1.0 Flex MT 2023
-              </h6>
+              </h2>
               <div className="flex items-center gap-2">
-                <h6 className="truncate text-xl leading-7 font-bold text-text-heading">
+                <h3 className="truncate text-xl leading-7 font-bold text-text-heading">
                   $285
-                </h6>
+                </h3>
                 <div className="items-center flex gap-1">
                   <div className="w-5 h-5 aspect-square flex justify-center items-center p-1 rounded-full bg-[#228B22]">
                     <svg

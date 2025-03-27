@@ -52,9 +52,22 @@ const PriceRatingOption: OptionsType[] = [
   },
 ];
 
-const PriceRating = () => {
+interface PriceRatingProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const PriceRating: React.FC<PriceRatingProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Price Rating">
+    <ExpendableMenu
+      Label="Price Rating"
+      tag="Price"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         ToggleText="All Price Rating "
         options={PriceRatingOption}
