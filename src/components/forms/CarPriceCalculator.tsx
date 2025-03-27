@@ -89,7 +89,7 @@ const CarPriceCalculator = () => {
           </div>
 
           <div>
-            <Label title="EST. Monthly Payment" />
+            <Label title="EST. Monthly Payment" className="text-nowrap" />
             <Input
               {...register("monthly payment")}
               type="tel"
