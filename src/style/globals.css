@@ -22,7 +22,7 @@
   --color-border-disabled: var(--color-text-disable);
   --color-border-hover: #1b6f1b;
   --color-success: #228b22;
-  --color-border-hover:var(--color-success)
+  --color-border-hover: var(--color-success);
   --color-text-heading: #1a1a1a;
   --color-text-error: #661e1e;
   --color-surface-disable: var(--color-button-disable);
@@ -58,30 +58,31 @@
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+  background: #888;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0e380e;
+  background: #0e380e;
 }
 
-#range-slider-yellow .range-slider__range {
+#range-slider-green .range-slider__range {
   background: #228b22;
+
   transition: height 0.3s;
 }
-#range-slider-yellow .range-slider__thumb {
+#range-slider-green .range-slider__thumb {
   background: #228b22;
   transition: transform 0.3s;
 }

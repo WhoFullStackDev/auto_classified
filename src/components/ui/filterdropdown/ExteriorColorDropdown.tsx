@@ -26,9 +26,22 @@ const ExteriorColorsOption: OptionsType[] = [
   { label: "Unknown", quantity: 6, icon: MdOutlineBlock },
 ];
 
-const ExteriorColorDropdown = () => {
+interface ExteriorColorDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const ExteriorColorDropdown: React.FC<ExteriorColorDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Exterior Colors">
+    <ExpendableMenu
+      Label="Exterior Colors"
+      tag="Exterior"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         ToggleText="All Exterior Colors "
         options={ExteriorColorsOption}

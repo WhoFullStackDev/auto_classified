@@ -2,13 +2,13 @@
 import FilterPill from "../FilterPill";
 import Input from "../Input";
 import Label from "../Label";
-import { IoLogoModelS } from "react-icons/io";
 import { useForm } from "react-hook-form";
+import { MdFormatListBulleted } from "react-icons/md";
 
 const ModelPill = () => {
   const { register } = useForm();
   return (
-    <FilterPill Icon={IoLogoModelS} title="Models">
+    <FilterPill Icon={MdFormatListBulleted} title="Models">
       <div className="h-[300px] overflow-y-scroll">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
           (value) => (

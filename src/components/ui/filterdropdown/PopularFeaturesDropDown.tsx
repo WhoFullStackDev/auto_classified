@@ -26,9 +26,22 @@ const PopularFeatures: OptionsType[] = [
   { label: "Unknown", quantity: 5126 },
 ];
 
-const PopularFeaturesDropDown = () => {
+interface PopularFeaturesDropDownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const PopularFeaturesDropDown: React.FC<PopularFeaturesDropDownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Popular Features">
+    <ExpendableMenu
+      Label="Popular Features"
+      tag="Popular"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         options={PopularFeatures}
         ToggleText="All Popular Features"

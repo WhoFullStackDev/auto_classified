@@ -13,9 +13,22 @@ const Transmission: OptionsType[] = [
   },
 ];
 
-const TransmissionDropdown = () => {
+interface TransmissionDropdownProps {
+  openDropdownTag: string | null;
+  setOpenDropdownTag: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const TransmissionDropdown: React.FC<TransmissionDropdownProps> = ({
+  openDropdownTag,
+  setOpenDropdownTag,
+}) => {
   return (
-    <ExpendableMenu Label="Transmission">
+    <ExpendableMenu
+      Label="Transmission"
+      tag="Transmission"
+      openDropdownTag={openDropdownTag}
+      setOpenDropdownTag={setOpenDropdownTag}
+    >
       <FilterCheckBoxOption
         options={Transmission}
         ToggleText="All Transmission"

@@ -9,6 +9,8 @@ import "react-range-slider-input/dist/style.css";
 interface IFormValue {
   startPrice: number;
   endPrice: number;
+  startMillage: number;
+  endMillage: number;
   priceDrop: boolean | string;
 }
 
@@ -18,11 +20,15 @@ const CashFilterForm = () => {
       startPrice: 0,
       endPrice: 100000,
       priceDrop: false,
+      endMillage: 2000000,
+      startMillage: 0,
     },
   });
 
   const startPrice = watch("startPrice");
   const endPrice = watch("endPrice");
+  const startMillage = watch("startMillage");
+  const endMillage = watch("endMillage");
 
   return (
     <form className="justify-center flex flex-col gap-4">
@@ -44,7 +50,7 @@ const CashFilterForm = () => {
         />
       </div>
       <RangeSlider
-        id="range-slider-yellow"
+        id="range-slider-green"
         min={0}
         max={100000}
         value={[startPrice, endPrice]}
@@ -71,6 +77,39 @@ const CashFilterForm = () => {
       <p className="text-text-body text-base font-normal leading-6 self-stretch ">
         See vehicles with price drops in the past 30 days
       </p>
+
+      <div className="flex justify-center gap-4 flex-col">
+        <Label title="Millage" />
+        <div className="justify-between items-center flex gap-2">
+          <Input
+            placeholder="0"
+            type="tel"
+            className="w-[120px] border-2"
+            {...register("startMillage")}
+            value={startMillage}
+          />
+          <p className="text-text-disable text-base font-medium leading-5">
+            To
+          </p>
+          <Input
+            placeholder="0"
+            type="tel"
+            className="w-[120px] border-2"
+            {...register("endMillage")}
+            value={endMillage}
+          />
+        </div>
+        <RangeSlider
+          id="range-slider-green"
+          min={0}
+          max={2000000}
+          value={[startMillage, endMillage]}
+          onInput={(value) => {
+            setValue("startMillage", value[0]);
+            setValue("endMillage", value[1]);
+          }}
+        />
+      </div>
     </form>
   );
 };

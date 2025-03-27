@@ -1,4 +1,5 @@
 import Filter from "@/components/sections/Filter";
+import Pagination from "@/components/sections/Pagination";
 import SearchView from "@/components/sections/SearchView";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
@@ -29,6 +30,7 @@ const searchResult = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SearchView />
       </Suspense>
+      <Pagination />
     </Container>
   );
 };

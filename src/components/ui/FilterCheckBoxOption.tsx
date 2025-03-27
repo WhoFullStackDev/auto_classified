@@ -37,7 +37,6 @@ const FilterCheckBoxOption: React.FC<FilterCheckBoxOptionProps> = ({
     );
   };
   const [checkedValue, setCheckedValue] = useState<string[]>([]);
-  console.log(checkedValue);
 
   useEffect(() => {
     if (allSelected) {
