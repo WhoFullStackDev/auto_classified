@@ -30,7 +30,7 @@ const SearchView = () => {
               priority
               width={295}
               height={197}
-              className="shrink-0"
+              className="shrink-0 aspect-[295/197]"
             />
             <div className="p-3 flex flex-col justify-center gap-2">
               <h2 className="truncate text-xl leading-7 font-bold text-text-heading">
@@ -75,7 +75,7 @@ const SearchView = () => {
                 <div className="flex items-center gap-1">
                   <TbManualGearbox className="w-5 h-5 shrink-0 text-text-body" />
                   <p className="font-normal text-base text-text-body leading-6">
-                    Automatic
+                    Auto
                   </p>
                 </div>
               </div>
