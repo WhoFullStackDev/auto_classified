@@ -59,6 +59,7 @@ const CarImageSlider = () => {
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
+        aria-live="polite"
         a11y={{
           enabled: true,
           nextSlideMessage: "Next slide",
