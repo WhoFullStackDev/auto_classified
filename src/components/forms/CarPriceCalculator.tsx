@@ -54,7 +54,7 @@ const CarPriceCalculator = () => {
       <form className="flex flex-col justify-center items-center gap-5 mt-10">
         <div className="flex justify-center  gap-8">
           <div>
-            <Label title="EST. Loan Term" />
+            <Label title="EST. Loan Term" htmlFor="Loan" />
             <Option
               className="border-2 rounded-sm"
               optionData={loneTerm}
@@ -64,7 +64,7 @@ const CarPriceCalculator = () => {
             />
           </div>
           <div>
-            <Label title="EST. Down Payment" />
+            <Label title="EST. Down Payment" htmlFor="down payment" />
             <Input
               {...register("down payment")}
               type="tel"
@@ -78,7 +78,7 @@ const CarPriceCalculator = () => {
         </div>
         <div className="flex justify-center  gap-8">
           <div>
-            <Label title="Credit Score" />
+            <Label title="Credit Score" htmlFor="credit" />
             <Option
               {...register("credit")}
               className="border-2 rounded-sm"
@@ -89,7 +89,11 @@ const CarPriceCalculator = () => {
           </div>
 
           <div>
-            <Label title="EST. Monthly Payment" className="text-nowrap" />
+            <Label
+              title="EST. Monthly Payment"
+              className="text-nowrap"
+              htmlFor="monthly payment"
+            />
             <Input
               {...register("monthly payment")}
               type="tel"
@@ -121,7 +125,11 @@ const CarPriceCalculator = () => {
                 }`}
               ></div>
             </button>
-            <Label title="Include trade-in" className="shrink-0" />
+            <Label
+              title="Include trade-in"
+              className="shrink-0"
+              htmlFor="trade"
+            />
           </div>
           <div>
             <Input

@@ -20,7 +20,7 @@ const Filter = () => {
         <MoreFilterPill />
       </div>
       <div className=" flex gap-2">
-        <p className="text-base text-gray-600 font-normal pb-3">Sort By</p>
+        <p className="text-base text-[#444444] font-normal pb-3">Sort By</p>
         <SortOptions />
       </div>
     </div>

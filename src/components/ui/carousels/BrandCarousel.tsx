@@ -24,7 +24,7 @@ const BrandCarousel = () => {
       >
         {/* Todo: Fetch car brand logo from server */}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action outline-none overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action outline-none overflow-hidden relative"
           key={1}
           tabIndex={0}
           aria-label={`Slide ${1}`}
@@ -41,7 +41,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={2}
           tabIndex={0}
           aria-label={`Slide ${2}`}
@@ -58,7 +58,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={3}
           tabIndex={0}
           aria-label={`Slide ${3}`}
@@ -75,7 +75,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={4}
           tabIndex={0}
           aria-label={`Slide ${4}`}
@@ -92,7 +92,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={5}
           tabIndex={0}
           aria-label={`Slide ${5}`}
@@ -109,7 +109,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={6}
           tabIndex={0}
           aria-label={`Slide ${6}`}
@@ -126,7 +126,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={7}
           tabIndex={0}
           aria-label={`Slide ${7}`}
@@ -143,7 +143,7 @@ const BrandCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-soft-lg cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer hover:bg-surface-action focus:outline-border-focus focus:outline-2  focus:bg-surface-action overflow-hidden relative"
           key={8}
           tabIndex={0}
           aria-label={`Slide ${8}`}

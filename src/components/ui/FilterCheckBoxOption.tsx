@@ -83,7 +83,7 @@ const FilterCheckBoxOption: React.FC<FilterCheckBoxOptionProps> = ({
                   Icon
                 )}
 
-                <Label title={label} />
+                <Label title={label} htmlFor={label} />
               </div>
             </div>
             {/* TODO:Update me */}

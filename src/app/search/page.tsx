@@ -14,13 +14,13 @@ const searchResult = () => {
       <div className="flex items-center gap-1 mt-5">
         <Link
           href="#"
-          className="text-text-body text-base font-normal leading-6 self-stretch  cursor-pointer"
+          className="text-text-body text-base font-normal leading-6 self-stretch  cursor-pointer underline hover:text-text-hover focus:text-text-hover"
         >{`${"Used Cars For Sale"}`}</Link>
 
         <FiChevronRight size={20} className="text-text-body " />
         <Link
           href="#"
-          className="text-text-body text-base font-normal leading-6 self-stretch cursor-pointer"
+          className="text-text-body text-base font-normal leading-6 self-stretch cursor-pointer underline hover:text-text-hover focus:text-text-hover"
         >
           Listing
         </Link>

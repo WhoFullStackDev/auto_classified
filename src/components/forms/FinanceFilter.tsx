@@ -41,7 +41,7 @@ const FinanceFilter = () => {
   return (
     <form className="flex flex-col gap-4 justify-center ">
       <div>
-        <Label title="Monthly payment" />
+        <Label title="Monthly payment" htmlFor="monthlyPayment" />
         <Input
           {...register("monthlyPayment")}
           placeholder="500"
@@ -50,7 +50,7 @@ const FinanceFilter = () => {
         />
       </div>
       <div>
-        <Label title="Down payment" />
+        <Label title="Down payment" htmlFor="downPayment" />
         <Input
           {...register("downPayment")}
           placeholder="3000"
@@ -59,9 +59,8 @@ const FinanceFilter = () => {
         />
       </div>
       <div>
-        <Label title="Credit score" />
+        <Label title="Credit score" htmlFor="creditScore" />
         <Option
-          // {...register("credit")}
           className="border-2 rounded-sm w-[300px]"
           optionData={creditScore}
           {...register("creditScore")}
@@ -69,7 +68,7 @@ const FinanceFilter = () => {
         />
       </div>
       <div>
-        <Label title="Term length" />
+        <Label title="Term length" htmlFor="loanTerms" />
         <Option
           className="border-2 rounded-sm w-[300px]"
           optionData={loneTerm}
@@ -100,7 +99,7 @@ const FinanceFilter = () => {
             type="checkbox"
             className="scale-[1.5] w-3 h-3"
           />
-          <Label title="Price drop" />
+          <Label title="Price drop" htmlFor="price-drop" />
         </div>
         {/* TODO:Update me */}
         <p className="text-text-body text-base font-normal leading-6 self-stretch ">
@@ -111,7 +110,7 @@ const FinanceFilter = () => {
         See vehicles with price drops in the past 30 days
       </p>
       <div className="flex justify-center gap-4 flex-col">
-        <Label title="Millage" />
+        <Label title="Millage" htmlFor="startMillage" />
         <div className="justify-between items-center flex gap-2">
           <Input
             placeholder="0"

@@ -67,7 +67,7 @@ const CashFilterForm = () => {
             value="price drop"
             className="scale-[1.5] w-3 h-3  accent-success"
           />
-          <Label title="Price drop" />
+          <Label title="Price drop" htmlFor="priceDrop" />
         </div>
         {/* TODO:Update me */}
         <p className="text-text-body text-base font-normal leading-6 self-stretch ">
@@ -79,7 +79,7 @@ const CashFilterForm = () => {
       </p>
 
       <div className="flex justify-center gap-4 flex-col">
-        <Label title="Millage" />
+        <Label title="Millage" htmlFor="startMillage" />
         <div className="justify-between items-center flex gap-2">
           <Input
             placeholder="0"
