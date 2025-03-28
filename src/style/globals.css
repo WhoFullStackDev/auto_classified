@@ -3,8 +3,6 @@
 @theme {
   --color-surface_page: #e6e6e6;
   --color-surface_primary: #ffffff;
-  --shadow-soft-lg: "0px 4px 16px 0px rgba(0, 0, 0, 0.20)";
-  --drop-shadow-soft-lg: "0px 4px 16px 0px rgba(0, 0, 0, 0.20)";
   --color-text-body: #333333;
   --color-text-hover: #0e380e;
   --color-text-action: #145314;

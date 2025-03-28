@@ -148,7 +148,7 @@ const CarHistoryDropdown: React.FC<CarHistoryDropdownProps> = ({
                 <Label title={label} />
               </div>
               {/* TODO:Update me */}
-              <p className="text-gray-600 text-base font-normal pl-6 leading-6">
+              <p className="text-[#444444] text-base font-normal pl-6 leading-6">
                 {details}
               </p>
             </div>
@@ -233,7 +233,7 @@ const CarHistoryDropdown: React.FC<CarHistoryDropdownProps> = ({
               <p className="text-text-body text-lg font-medium leading-6">24</p>
             </div>
             {/* TODO:Update me */}
-            <p className="text-gray-600 text-base font-normal pl-6 leading-6">
+            <p className="text-[#444444] text-base font-normal pl-6 leading-6">
               Vehicles owned or leased by a business rather than an individual
             </p>
           </div>
@@ -259,7 +259,7 @@ const CarHistoryDropdown: React.FC<CarHistoryDropdownProps> = ({
               <p className="text-text-body text-lg font-medium leading-6">24</p>
             </div>
             {/* TODO:Update me */}
-            <p className="text-gray-600 text-base font-normal pl-6 leading-6">
+            <p className="text-[#444444] text-base font-normal pl-6 leading-6">
               Vehicles used in a rental capacity
             </p>
           </div>
