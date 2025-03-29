@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "../style/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Head from "next/head";
 
 const calibreSans = localFont({
   display: "swap",
@@ -45,9 +44,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${calibreSans.variable} antialiased`}>
-      <Head>
-        <link rel="preload" as="style" href="/style/globals.css" />
-      </Head>
       <body className="min-h-dvh bg-surface_page overflow-x-hidden ">
         <Navbar />
         <div className="min-h-dvh">{children}</div>

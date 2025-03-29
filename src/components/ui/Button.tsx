@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       aria-label={ariaLabel}
       className={cn(
-        "flex justify-center items-center w-[85px] h-10 px-4 py-2 bg-button-primary hover:bg-button-hover  focus:bg-button-hover  shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] disabled:bg-button-disable rounded-sm text-text-on-action font-medium text-base leading-6 shrink-0 disabled:text-text-on-disabled cursor-pointer",
+        "flex justify-center items-center w-[85px] h-10 px-4 py-2 bg-button-primary hover:bg-button-hover  focus:bg-button-hover  shadow-lg disabled:bg-button-disable rounded-sm text-text-on-action font-medium text-base leading-6 shrink-0 disabled:text-text-on-disabled cursor-pointer",
         className
       )}
     >

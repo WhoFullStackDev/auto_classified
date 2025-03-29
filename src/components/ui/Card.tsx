@@ -7,7 +7,7 @@ import { TbManualGearbox } from "react-icons/tb";
 
 const Card = () => {
   return (
-    <div className="w-[295px] h-[314px] bg-surface_primary rounded-xl relative shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] overflow-hidden  cursor-pointer">
+    <div className="w-[295px] h-[314px] bg-surface_primary rounded-xl relative shadow-lg overflow-hidden  cursor-pointer">
       <div className="absolute w-fit h-fit justify-center items-center flex px-2  bg-surface_primary rounded-lg  top-3 left-3 z-[1]">
         <small className="text-text-body">Sponsor</small>
       </div>

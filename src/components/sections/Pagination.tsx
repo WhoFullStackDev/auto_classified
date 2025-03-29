@@ -19,7 +19,7 @@ const Pagination = () => {
       </p>
       <div className="flex items-center gap-4">
         <button
-          className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white focus:text-white"
+          className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-lg cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white focus:text-white"
           aria-label="Previous Page"
         >
           <FiChevronLeft size={24} className="shrink-0 text-inherit" />
@@ -29,7 +29,7 @@ const Pagination = () => {
         {[1, 2, 3, 4, 5, "...", 25].map((page, index) => (
           <button
             key={index}
-            className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white  focus:text-white"
+            className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-lg cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white  focus:text-white"
             aria-label={`Go to page ${page}`}
           >
             <h2 className="text-xl font-bold text-inherit leading-7">{page}</h2>
@@ -37,7 +37,7 @@ const Pagination = () => {
         ))}
 
         <button
-          className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white  focus:text-white"
+          className="flex justify-center items-center w-12 h-12 rounded-full bg-surface_primary shadow-lg cursor-pointer transition-colors duration-300 hover:bg-text-hover focus:bg-button-hover focus:ring focus:ring-text-hover focus:ring-opacity-50 hover:text-white  focus:text-white"
           aria-label="Next Page"
         >
           <FiChevronRight size={24} className="shrink-0 text-inherit" />

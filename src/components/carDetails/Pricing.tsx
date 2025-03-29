@@ -40,7 +40,7 @@ const Pricing = () => {
         price
       </p>
       <div className="flex flex-col justify-center gap-3 mt-5">
-        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] flex justify-between items-center rounded-xl p-5 ">
+        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
           <div className="flex items-center gap-3">
             <input
               type="radio"
@@ -57,7 +57,7 @@ const Pricing = () => {
             $17,890
           </h3>
         </div>
-        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] flex justify-between items-center rounded-xl p-5 ">
+        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
           <div className="flex items-center gap-3">
             <input
               type="radio"
@@ -82,7 +82,7 @@ const Pricing = () => {
 
         {pickPriceOption === "finance" && (
           <div>
-            <div className="w-[610px] h-[156px] bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-6 flex flex-col justify-center items-center gap-2">
+            <div className="w-[610px] h-[156px] bg-surface_primary shadow-lg rounded-xl p-6 flex flex-col justify-center items-center gap-2">
               <Label
                 title="Your estimated payment* is"
                 className="inline"
@@ -101,7 +101,7 @@ const Pricing = () => {
               </p>
             </div>
 
-            <div className="w-[610px]  bg-surface_primary  shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] h-[460px] rounded-xl p-8 mt-5">
+            <div className="w-[610px]  bg-surface_primary  shadow-lg h-[460px] rounded-xl p-8 mt-5">
               <h3 className="text-xl leading-7 text-text-heading font-bold">
                 Select your finance terms
               </h3>

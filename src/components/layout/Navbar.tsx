@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <nav className="bg-surface_primary h-14 shrink-0 shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
+    <nav className="bg-surface_primary h-14 shrink-0 shadow-lg">
       <Container className="h-full">
         <div className="h-full flex justify-between items-center">
           <Link href="/" className="font-black text-2xl">

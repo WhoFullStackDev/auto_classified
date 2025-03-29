@@ -7,6 +7,7 @@ import Overview from "@/components/carDetails/Overview";
 import Pricing from "@/components/carDetails/Pricing";
 import Recommendation from "@/components/carDetails/Recommendation";
 import Safety from "@/components/carDetails/Safety";
+import CarSidebarInfo from "@/components/sections/CarSidebarInfo";
 import CarImageSlider from "@/components/ui/carousels/CarImageSlider";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
@@ -59,9 +60,9 @@ const Listing = () => {
         </div>
         <Heading text="2022 BMW X3 sDrive30i RWD" className="mt-10" />
         <div className="flex gap-5">
-          <div className="flex flex-col w-[610px]">
+          <div className="flex flex-col w-[610px] aspect-[610/2760]">
             <CarImageSlider />
-            <div className="mt-5 flex flex-col gap-7">
+            <div className="mt-5 flex flex-col gap-7 aspect-">
               <Feature />
               <Overview />
               <FuelSpecs />
@@ -73,6 +74,7 @@ const Listing = () => {
               <Recommendation />
             </div>
           </div>
+          <CarSidebarInfo />
         </div>
       </div>
     </Container>

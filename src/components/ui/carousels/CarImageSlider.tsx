@@ -115,13 +115,13 @@ const CarImageSlider = () => {
         }}
         modules={[FreeMode, Navigation, Keyboard, A11y, Thumbs]}
         keyboard={true}
-        className="w-[610px]!"
+        className="w-[610px]! aspect-[610/43] "
       >
         <SwiperSlide
           key={1}
           tabIndex={0}
           aria-label={`Thumbnail ${1}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px]! h-[43px]!  overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
@@ -136,7 +136,7 @@ const CarImageSlider = () => {
           key={2}
           tabIndex={0}
           aria-label={`Thumbnail ${2}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
@@ -151,7 +151,7 @@ const CarImageSlider = () => {
           key={3}
           tabIndex={0}
           aria-label={`Thumbnail ${3}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
@@ -166,7 +166,7 @@ const CarImageSlider = () => {
           key={4}
           tabIndex={0}
           aria-label={`Thumbnail ${4}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
@@ -181,7 +181,7 @@ const CarImageSlider = () => {
           key={5}
           tabIndex={0}
           aria-label={`Thumbnail ${5}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
@@ -196,7 +196,7 @@ const CarImageSlider = () => {
           key={6}
           tabIndex={0}
           aria-label={`Thumbnail ${6}`}
-          className="w-[85px]! h-[43px]! overflow-hidden rounded-xl aspect-[85/43]"
+          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
         >
           <Image
             src="/images/Hondai.avif"
