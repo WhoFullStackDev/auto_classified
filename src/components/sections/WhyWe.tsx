@@ -1,9 +1,10 @@
+"use cache";
 import Heading from "../ui/Heading";
 import Container from "../ui/Container";
 import Image from "next/image";
 import Button from "../ui/Button";
 
-const WhyWe = () => {
+const WhyWe = async () => {
   return (
     <Container>
       <div className="h-full flex justify-center items-center flex-col gap-5">

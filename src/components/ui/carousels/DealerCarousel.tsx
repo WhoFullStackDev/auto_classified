@@ -23,7 +23,7 @@ const DealerCarousel = () => {
       >
         {/* Todo: Fetch Person image ,name,place from server */}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={1}
           tabIndex={0}
           aria-label={`Slide ${1}`}
@@ -45,7 +45,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={2}
           tabIndex={0}
           aria-label={`Slide ${2}`}
@@ -67,7 +67,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={3}
           tabIndex={0}
           aria-label={`Slide ${3}`}
@@ -89,7 +89,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={4}
           tabIndex={0}
           aria-label={`Slide ${4}`}
@@ -111,7 +111,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={5}
           tabIndex={0}
           aria-label={`Slide ${5}`}
@@ -133,7 +133,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={6}
           tabIndex={0}
           aria-label={`Slide ${6}`}
@@ -155,7 +155,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={7}
           tabIndex={0}
           aria-label={`Slide ${7}`}
@@ -177,7 +177,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={8}
           tabIndex={0}
           aria-label={`Slide ${8}`}
@@ -199,7 +199,7 @@ const DealerCarousel = () => {
           </div>
         </SwiperSlide>{" "}
         <SwiperSlide
-          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)] cursor-pointer overflow-hidden relative"
+          className="  h-[200px]! w-[200px]! rounded-xl bg-surface_primary shadow-lg cursor-pointer overflow-hidden relative"
           key={9}
           tabIndex={0}
           aria-label={`Slide ${9}`}

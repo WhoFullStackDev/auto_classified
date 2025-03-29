@@ -58,7 +58,7 @@ const MostSellingCarsCarousel = () => {
         {/* TODO: Add skeleton, blur*/}
         {[1, 2, 3, 4, 5].map((num) => (
           <SwiperSlide
-            className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]"
+            className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer shadow-lg"
             key={num}
             tabIndex={0}
             aria-label={`Slide ${num}`}
@@ -73,13 +73,13 @@ const MostSellingCarsCarousel = () => {
             />
             <div className="w-[400px] absolute h-28 bg-[linear-gradient(178deg,_rgba(0,0,0,0)_2.03%,_#000_97.97%)] -bottom-28 group-hover:bottom-0 delay-300 transition-all group-hover:opacity-100 ease-in-out left-0 p-5 flex flex-col gap-5 rounded-bl-lg rounded-br-lg">
               <div className="flex items-center gap-10">
-                <h2 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
+                <h2 className="text-white font-bold text-xl leading-7 drop-shadow-lg">
                   {truncateText(
                     "Bmw M5 Competition Twin turbo 4.4L v8 engine",
                     18
                   )}
                 </h2>
-                <h3 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
+                <h3 className="text-white font-bold text-xl leading-7 drop-shadow-lg">
                   $75,000
                 </h3>
               </div>

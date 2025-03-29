@@ -23,7 +23,7 @@ const TestimonialCarousel = () => {
       >
         {[1, 2, 3, 4, 5].map((num) => (
           <SwiperSlide
-            className="w-[400px]! h-[300px]! relative rounded-lg overflow-hidden cursor-pointer shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]"
+            className="w-[400px]! h-[300px]! relative rounded-lg overflow-hidden cursor-pointer shadow-lg"
             key={num}
             tabIndex={0}
             aria-label={`Slide ${num}`}
