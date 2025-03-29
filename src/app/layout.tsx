@@ -45,9 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${calibreSans.variable} antialiased`}>
-      {/* <Head>
+      <Head>
         <link rel="preload" as="style" href="/style/globals.css" />
-      </Head> */}
+      </Head>
       <body className="min-h-dvh bg-surface_page overflow-x-hidden ">
         <Navbar />
         <div className="min-h-dvh">{children}</div>
