@@ -7,21 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { truncateText } from "@/lib/truncateText";
+import { FiCalendar } from "react-icons/fi";
+import { SlSpeedometer } from "react-icons/sl";
+import { TbManualGearbox } from "react-icons/tb";
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
-
-const FiCalendar = dynamic(
-  () => import("react-icons/fi").then((mod) => mod.FiCalendar),
-  { ssr: false }
-);
-const SlSpeedometer = dynamic(
-  () => import("react-icons/sl").then((mod) => mod.SlSpeedometer),
-  { ssr: false }
-);
-const TbManualGearbox = dynamic(
-  () => import("react-icons/tb").then((mod) => mod.TbManualGearbox),
-  { ssr: false }
-);
 
 const MostSellingCarsCarousel = () => {
   useEffect(() => {
@@ -84,15 +73,15 @@ const MostSellingCarsCarousel = () => {
             />
             <div className="w-[400px] absolute h-28 bg-[linear-gradient(178deg,_rgba(0,0,0,0)_2.03%,_#000_97.97%)] -bottom-28 group-hover:bottom-0 delay-300 transition-all group-hover:opacity-100 ease-in-out left-0 p-5 flex flex-col gap-5 rounded-bl-lg rounded-br-lg">
               <div className="flex items-center gap-10">
-                <h4 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
+                <h2 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
                   {truncateText(
                     "Bmw M5 Competition Twin turbo 4.4L v8 engine",
                     18
                   )}
-                </h4>
-                <h4 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
+                </h2>
+                <h3 className="text-white font-bold text-xl leading-7 drop-shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.1)]">
                   $75,000
-                </h4>
+                </h3>
               </div>
               <div className="flex gap-9 items-center">
                 <div className="flex items-center gap-1">
