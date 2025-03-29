@@ -7,10 +7,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { truncateText } from "@/lib/truncateText";
-import { FiCalendar } from "react-icons/fi";
-import { SlSpeedometer } from "react-icons/sl";
-import { TbManualGearbox } from "react-icons/tb";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const FiCalendar = dynamic(
+  () => import("react-icons/fi").then((mod) => mod.FiCalendar),
+  { ssr: false }
+);
+const SlSpeedometer = dynamic(
+  () => import("react-icons/sl").then((mod) => mod.SlSpeedometer),
+  { ssr: false }
+);
+const TbManualGearbox = dynamic(
+  () => import("react-icons/tb").then((mod) => mod.TbManualGearbox),
+  { ssr: false }
+);
 
 const MostSellingCarsCarousel = () => {
   useEffect(() => {

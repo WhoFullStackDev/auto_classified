@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import Heading from "../ui/Heading";
 import Input from "../ui/Input";
 import Option from "../ui/Option";
@@ -11,7 +11,6 @@ import { calculateEstimateBudget, creditScore, loneTerm } from "@/lib/utils";
 
 const CarPriceCalculator = () => {
   const [showInput, setShowInput] = useState<boolean>(false);
-  const [budget, setBudget] = useState<number>(0);
 
   const { register, watch, setValue } = useForm({
     defaultValues: {
@@ -28,21 +27,20 @@ const CarPriceCalculator = () => {
   const downPayment = watch("down payment");
   const monthlyPayment = watch("monthly payment");
   const tradeValue = watch("trade");
-  useEffect(() => {
-    const price = calculateEstimateBudget({
+  const price = useMemo(() => {
+    const estimate = calculateEstimateBudget({
       terms: Number(terms),
       creditScore: credit,
       downPayment: Number(downPayment),
       monthlyPayment: Number(monthlyPayment),
       tradeValue: Number(tradeValue),
     });
-
-    setBudget(price);
+    return estimate;
   }, [credit, downPayment, monthlyPayment, terms, tradeValue]);
   return (
     <div className="w-[350px]">
       <Heading
-        text={budget !== 0 ? `$${budget.toLocaleString()}` : "Loading..."}
+        text={price !== 0 ? `$${price.toLocaleString()}` : "Loading..."}
         className="text-center"
       />
       <p className="text-text-body text-base font-normal leading-6 self-stretch text-center pt-2">

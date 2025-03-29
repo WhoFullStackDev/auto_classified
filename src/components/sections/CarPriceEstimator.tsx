@@ -12,6 +12,7 @@ const CarPriceEstimator = () => {
           <p className="text-text-body text-base font-normal leading-6 self-stretch w-[260px] pt-3">
             Connect with our nationwide network of certified dealers.
           </p>
+          <div className="w-[589px] h-[334px] relative"></div>
           <Image
             src="/images/Car.avif"
             alt="Car"
