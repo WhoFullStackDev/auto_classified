@@ -9,6 +9,7 @@ const HeroSection = () => {
         height: "776px",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        width: "1280px",
       }}
     >
       <Container className="h-full">

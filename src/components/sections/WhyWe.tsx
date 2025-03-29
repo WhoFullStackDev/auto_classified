@@ -18,9 +18,9 @@ const WhyWe = () => {
               loading="lazy"
               style={{ width: "auto", height: "auto" }}
             />
-            <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9 text-nowrap">
+            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9 text-nowrap">
               Transparent pricing
-            </h4>
+            </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
               No surprises here. See how much {`you'll`} pay on cars you like.
             </p>
@@ -34,9 +34,9 @@ const WhyWe = () => {
               loading="lazy"
               style={{ width: "auto", height: "auto" }}
             />
-            <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9">
+            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9">
               Minutes, not hours
-            </h4>
+            </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
               Time saving tools to help you find the right car in a snap.
             </p>
@@ -50,9 +50,9 @@ const WhyWe = () => {
               style={{ width: "auto", height: "auto" }}
               loading="lazy"
             />
-            <h4 className="text-text-heading text-center text-2.5xl font-bold leading-9">
+            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9">
               Shop your way
-            </h4>
+            </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
               Your own pace, your own space. Shop online where and when {`it's`}
               convenient for you.
