@@ -9,17 +9,23 @@ const WhyWe = async () => {
     <Container>
       <div className="h-full flex justify-center items-center flex-col gap-5">
         <Heading text="Why We?" className="mt-[120px]" />
-        <div className="w-[1240px] h-[410px] rounded-xl border-2 border-white bg-[linear-gradient(96deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 100%)] mt-10 flex justify-center items-center gap-[120px] backdrop-blur-xl">
+        <div className="md:w-[1240px] md:h-[410px] h-[700px] w-full rounded-xl border-2 border-white bg-[linear-gradient(96deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 100%)] mt-10 flex max-md:flex-col justify-center items-center md:gap-[120px] gap-8 backdrop-blur-xl">
           <div className="w-[250px] flex flex-col items-center gap-5 ">
-            <Image
-              src="/images/transparent-pricing.svg"
-              alt="transparent-pricing "
-              width={196}
-              height={130}
-              loading="lazy"
-              style={{ width: "auto", height: "auto" }}
-            />
-            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9 text-nowrap">
+            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative">
+              <Image
+                src="/images/transparent-pricing.svg"
+                alt="transparent-pricing "
+                fill
+                quality={100}
+                loading="lazy"
+                style={{
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+            </div>
+
+            <h2 className="text-text-heading text-center md:text-2.5xl text-2xl font-bold md:leading-9 leading-8 text-nowrap">
               Transparent pricing
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
@@ -27,15 +33,20 @@ const WhyWe = async () => {
             </p>
           </div>
           <div className="w-[250px] flex flex-col items-center gap-5">
-            <Image
-              src="/images/minutes-not-hours.svg"
-              alt="minutes-not-hours"
-              width={196}
-              height={130}
-              loading="lazy"
-              style={{ width: "auto", height: "auto" }}
-            />
-            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9">
+            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative">
+              <Image
+                src="/images/minutes-not-hours.svg"
+                alt="minutes-not-hours"
+                fill
+                quality={100}
+                loading="lazy"
+                style={{
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+            </div>
+            <h2 className="text-text-heading text-center font-bold md:leading-9 leading-8 md:text-2.5xl text-2xl">
               Minutes, not hours
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
@@ -43,15 +54,20 @@ const WhyWe = async () => {
             </p>
           </div>
           <div className="w-[250px] flex flex-col items-center gap-5">
-            <Image
-              src="/images/shop-your-way.svg"
-              alt="shop-your-way"
-              width={196}
-              height={130}
-              style={{ width: "auto", height: "auto" }}
-              loading="lazy"
-            />
-            <h2 className="text-text-heading text-center text-2.5xl font-bold leading-9">
+            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative ">
+              <Image
+                src="/images/shop-your-way.svg"
+                alt="shop-your-way"
+                fill
+                quality={100}
+                loading="lazy"
+                style={{
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+            </div>
+            <h2 className="text-text-heading text-center font-bold md:leading-9 leading-8 md:text-2.5xl text-2xl">
               Shop your way
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">

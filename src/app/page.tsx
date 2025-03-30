@@ -6,11 +6,11 @@ import Services from "@/components/sections/Services";
 import Testimonial from "@/components/sections/Testimonial";
 import TopDealers from "@/components/sections/TopDealers";
 import WhyWe from "@/components/sections/WhyWe";
-import React from "react";
+import { Fragment } from "react";
 
 const page = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <HeroSection />
       <MostSellingCars />
       <Services />
@@ -19,7 +19,7 @@ const page = () => {
       <BrandSection />
       <TopDealers />
       <Testimonial />
-    </React.Fragment>
+    </Fragment>
   );
 };
 

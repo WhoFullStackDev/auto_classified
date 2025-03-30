@@ -12,7 +12,6 @@ import CarImageSlider from "@/components/ui/carousels/CarImageSlider";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import Link from "next/link";
-import React from "react";
 import { FiChevronRight } from "react-icons/fi";
 
 const Listing = () => {

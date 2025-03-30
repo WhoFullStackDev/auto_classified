@@ -1,4 +1,3 @@
-import React from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Option, { dataStructure } from "../ui/Option";
 

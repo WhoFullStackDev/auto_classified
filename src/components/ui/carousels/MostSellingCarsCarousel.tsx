@@ -10,40 +10,13 @@ import { truncateText } from "@/lib/truncateText";
 import { FiCalendar } from "react-icons/fi";
 import { SlSpeedometer } from "react-icons/sl";
 import { TbManualGearbox } from "react-icons/tb";
-import { useEffect } from "react";
 
 const MostSellingCarsCarousel = () => {
-  useEffect(() => {
-    const prevButton = document.querySelector(
-      ".swiper-button-prev"
-    ) as HTMLElement;
-    const nextButton = document.querySelector(
-      ".swiper-button-next"
-    ) as HTMLElement;
-
-    if (!prevButton || !nextButton) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === " " || e.key === "Enter") {
-        e.preventDefault(); // Stop page scrolling
-        (e.target as HTMLElement).click(); // Trigger button click
-      }
-    };
-
-    prevButton.addEventListener("keydown", handleKeyDown);
-    nextButton.addEventListener("keydown", handleKeyDown);
-
-    // Cleanup function to remove event listeners when the component unmounts
-    return () => {
-      prevButton.removeEventListener("keydown", handleKeyDown);
-      nextButton.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
   return (
     <div>
       <Swiper
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         navigation={true}
         a11y={{
           enabled: true,
@@ -53,27 +26,36 @@ const MostSellingCarsCarousel = () => {
         }}
         modules={[Navigation, A11y, Keyboard]}
         keyboard={{ enabled: true }}
-        className="h-[400px] mt-10"
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+        className="md:h-[400px] h-[280px] mt-10"
       >
         {/* TODO: Add skeleton, blur*/}
         {[1, 2, 3, 4, 5].map((num) => (
           <SwiperSlide
-            className="w-[400px] h-[400px] relative rounded-lg group overflow-hidden cursor-pointer shadow-lg"
+            className="md:w-[400px]! md:h-[400px]! h-[280px]! w-[335px]! relative rounded-lg group overflow-hidden cursor-pointer shadow-lg md:aspect-square aspect-[280/335]"
             key={num}
             tabIndex={0}
             aria-label={`Slide ${num}`}
           >
             <Image
-              src="/images/Card.avif"
+              src="/images/BMW-M5.avif"
               alt="car"
-              className="object-fill"
-              width={400}
-              height={400}
-              priority
+              sizes="(min-width: 768px) 400px, 335px"
+              loading="lazy"
+              style={{
+                objectFit: "cover",
+                position: "absolute",
+              }}
+              fill
             />
-            <div className="w-[400px] absolute h-28 bg-[linear-gradient(178deg,_rgba(0,0,0,0)_2.03%,_#000_97.97%)] -bottom-28 group-hover:bottom-0 delay-300 transition-all group-hover:opacity-100 ease-in-out left-0 p-5 flex flex-col gap-5 rounded-bl-lg rounded-br-lg">
-              <div className="flex items-center gap-10">
-                <h2 className="text-white font-bold text-xl leading-7 drop-shadow-lg">
+
+            <div className="w-full absolute bottom-0 h-28 bg-[linear-gradient(178deg,_rgba(0,0,0,0)_2.03%,_#000_97.97%)] md:-bottom-28 md:group-hover:bottom-0 md:delay-300 md:transition-all md:group-hover:opacity-100 md:ease-in-out md:left-0 md:p-5 p-4 flex flex-col gap-5 rounded-bl-lg rounded-br-lg">
+              <div className="flex items-center md:gap-10 gap-6">
+                <h2 className="text-white font-bold text-xl leading-7 drop-shadow-lg text-nowrap">
                   {truncateText(
                     "Bmw M5 Competition Twin turbo 4.4L v8 engine",
                     18
@@ -83,7 +65,7 @@ const MostSellingCarsCarousel = () => {
                   $75,000
                 </h3>
               </div>
-              <div className="flex gap-9 items-center">
+              <div className="flex md:gap-9 gap-3 items-center">
                 <div className="flex items-center gap-1">
                   <FiCalendar className="w-5 h-5 shrink-0 text-white" />
                   <p className="font-normal text-base text-white leading-6">

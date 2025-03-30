@@ -27,6 +27,7 @@ const CarPriceCalculator = () => {
   const downPayment = watch("down payment");
   const monthlyPayment = watch("monthly payment");
   const tradeValue = watch("trade");
+
   const price = useMemo(() => {
     const estimate = calculateEstimateBudget({
       terms: Number(terms),
@@ -37,64 +38,67 @@ const CarPriceCalculator = () => {
     });
     return estimate;
   }, [credit, downPayment, monthlyPayment, terms, tradeValue]);
+
   return (
-    <div className="w-[350px]">
+    <div className="w-full max-w-[350px] mx-auto">
       <Heading
         text={price !== 0 ? `$${price.toLocaleString()}` : "Loading..."}
         className="text-center"
       />
-      <p className="text-text-body text-base font-normal leading-6 self-stretch text-center pt-2">
+      <p className="text-text-body text-base font-normal leading-6 text-center pt-2">
         Est. buying power
       </p>
-      <p className="text-text-body text-sm font-normal leading-6 self-stretch text-center pt-1">
-        Based on 8.06% APR
+      <p className="text-text-body text-sm font-normal leading-6 text-center pt-1">
+        Based on 8.06% APR
       </p>
-      <form className="flex flex-col justify-center items-center gap-5 mt-10">
-        <div className="flex justify-center  gap-8">
-          <div>
-            <Label title="EST. Loan Term" htmlFor="Loan" />
+      <form className="flex flex-col justify-center items-center gap-5 mt-10 w-full px-4">
+        <div className="flex flex-wrap justify-between gap-5 w-full">
+          <div className="flex-1 min-w-[130px]">
+            <Label title="Loan Term" htmlFor="Loan" />
             <Option
-              className="border-2 rounded-sm"
+              className="border-2 rounded-sm w-full bg-surface_primary"
               optionData={loneTerm}
               {...register("Loan")}
               name="Loan"
               ariaLabelledby="Loan"
             />
           </div>
-          <div>
-            <Label title="EST. Down Payment" htmlFor="down payment" />
+          <div className="flex-1 min-w-[130px]">
+            <Label title="Down Payment" htmlFor="down payment" />
             <Input
               {...register("down payment")}
               type="tel"
               id="down payment"
               name="down payment"
+              className="w-full bg-surface_primary"
               defaultValue={3000}
               placeholder="3,000"
             />
             <InputError error="hrr" />
           </div>
         </div>
-        <div className="flex justify-center  gap-8">
-          <div>
+        <div className="flex flex-wrap justify-between gap-5 w-full">
+          <div className="flex-1 min-w-[130px]">
             <Label title="Credit Score" htmlFor="credit" />
             <Option
               {...register("credit")}
-              className="border-2 rounded-sm"
+              className="border-2 rounded-sm w-full bg-surface_primary"
               optionData={creditScore}
               name="credit"
               ariaLabelledby="credit"
             />
           </div>
 
-          <div>
+          <div className="flex-1 min-w-[130px]">
             <Label
-              title="EST. Monthly Payment"
+              title="Monthly Payment"
               className="text-nowrap"
               htmlFor="monthly payment"
             />
             <Input
               {...register("monthly payment")}
               type="tel"
+              className="w-full bg-surface_primary"
               id="monthly payment"
               name="monthly payment"
               defaultValue={500}
@@ -103,13 +107,13 @@ const CarPriceCalculator = () => {
             <InputError error="hrr" />
           </div>
         </div>
-        <div className="flex justify-center  gap-8">
-          <div className=" flex justify-center items-center gap-1 w-[172px]">
+        <div className="flex justify-between items-center gap-5 w-full">
+          <div className="flex items-center gap-2 w-[172px]">
             <button
               aria-label="toggle"
               type="button"
               role="button"
-              className={`w-[50px] h-[30px] flex p-[2px] items-center shrink-0 gap-2 rounded-[20px] ${
+              className={`w-[50px] h-[30px] flex p-[2px] items-center gap-2 rounded-[20px] ${
                 showInput ? "bg-surface-action" : "bg-surface-disable"
               } relative`}
               onClick={() => {
@@ -118,18 +122,18 @@ const CarPriceCalculator = () => {
               }}
             >
               <div
-                className={`w-[26px] h-[26px] aspect-square bg-surface_primary  ease-in-out transition-all delay-200 rounded-full absolute ${
+                className={`w-[26px] h-[26px] bg-surface_primary rounded-full absolute transition-all ${
                   showInput && "right-0.5"
                 }`}
               ></div>
             </button>
             <Label
               title="Include trade-in"
-              className="shrink-0"
+              className="text-wrap"
               htmlFor="trade"
             />
           </div>
-          <div>
+          <div className="flex-1 min-w-[130px]">
             <Input
               {...register("trade")}
               type="tel"
@@ -137,17 +141,19 @@ const CarPriceCalculator = () => {
               name="trade"
               defaultValue={0}
               placeholder="0"
-              className={` ${showInput ? "visible" : "invisible"}`}
+              className={`w-full ${
+                showInput ? "visible" : "invisible"
+              } bg-surface_primary`}
             />
           </div>
         </div>
+        <Button
+          label="Get My Match"
+          type="submit"
+          ariaLabel="Get My Match"
+          className="w-full md:w-[380px] h-[50px] rounded-2xl mt-6"
+        />
       </form>
-      <Button
-        label="Get My Match"
-        type="submit"
-        ariaLabel="Get My Match"
-        className="w-[380px] h-[50px] rounded-2xl mt-6"
-      />
     </div>
   );
 };

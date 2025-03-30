@@ -8,10 +8,12 @@ const MostSellingCars = () => {
   return (
     <Container>
       <div className="flex justify-center items-center gap-4 pt-[120px]">
-        <Heading text="Top-Selling Cars" />
+        <Heading text="Top-Selling Cars" className="text-nowrap" />
         <FiTrendingUp className="w-8 h-8 aspect-square text-success" />
       </div>
+
       <MostSellingCarsCarousel />
+
       <div className="flex justify-center items-center mt-10 ">
         <Button
           type="button"

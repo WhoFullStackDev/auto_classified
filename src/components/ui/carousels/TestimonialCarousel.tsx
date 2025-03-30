@@ -12,10 +12,15 @@ const TestimonialCarousel = () => {
     <div>
       <Swiper
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         a11y={{
           enabled: true,
           slideLabelMessage: "Slide {{index}}",
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
         }}
         modules={[A11y, Keyboard]}
         keyboard={{ enabled: true }}
@@ -23,7 +28,7 @@ const TestimonialCarousel = () => {
       >
         {[1, 2, 3, 4, 5].map((num) => (
           <SwiperSlide
-            className="w-[400px]! h-[300px]! relative rounded-lg overflow-hidden cursor-pointer shadow-lg"
+            className="md:w-[400px]! md:h-[300px]! w-full h-[280px] relative rounded-lg overflow-hidden cursor-pointer shadow-lg"
             key={num}
             tabIndex={0}
             aria-label={`Slide ${num}`}

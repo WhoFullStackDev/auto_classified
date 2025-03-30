@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import ExpendableMenu from "../pills/ExpendableMenu";
 import FilterCheckBoxOption, { OptionsType } from "../FilterCheckBoxOption";
 import { MdOutlineBlock } from "react-icons/md";
