@@ -7,20 +7,23 @@ import CarPriceCalculator from "../forms/CarPriceCalculator";
 const CarPriceEstimator = async () => {
   return (
     <Container>
-      <div className="mt-[120px] flex justify-center items-center gap-[120px]">
+      <div className="mt-[120px] flex max-md:flex-col justify-center items-center gap-[120px]">
         <div>
-          <Heading text="Estimate your budget" />
-          <p className="text-text-body text-base font-normal leading-6 self-stretch w-[260px] pt-3">
+          <Heading text="Estimate your budget" className="max-md:text-center" />
+          <p className="text-text-body text-base font-normal leading-6 self-stretch md:w-[260px] w-full pt-3 max-md:text-center">
             Connect with our nationwide network of certified dealers.
           </p>
-          <Image
-            src="/images/Car.avif"
-            alt="Car"
-            width={589}
-            height={334}
-            loading="lazy"
-            className="mt-3"
-          />
+          <div className="md:w-[590px] md:h-[334px]  w-full h-[180px] relative mt-3">
+            <Image
+              src="/images/Car.avif"
+              alt="Car"
+              sizes="(min-width: 780px) 590px, (min-width: 500px) 417px, (min-width: 400px) calc(71.25vw + 75px), calc(27.5vw + 236px)"
+              fill
+              quality={100}
+              loading="lazy"
+              style={{ objectFit: "cover", position: "absolute" }}
+            />
+          </div>
         </div>
         <CarPriceCalculator />
       </div>

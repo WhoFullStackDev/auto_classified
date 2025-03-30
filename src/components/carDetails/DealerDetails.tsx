@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 

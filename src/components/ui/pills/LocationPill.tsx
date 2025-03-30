@@ -1,4 +1,3 @@
-import React from "react";
 import FilterPill from "../FilterPill";
 import { FiMapPin, FiSearch } from "react-icons/fi";
 import Input from "../Input";

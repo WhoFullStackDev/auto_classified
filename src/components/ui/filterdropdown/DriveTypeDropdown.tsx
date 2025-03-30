@@ -1,4 +1,3 @@
-import React from "react";
 import FilterCheckBoxOption, { OptionsType } from "../FilterCheckBoxOption";
 import ExpendableMenu from "../pills/ExpendableMenu";
 

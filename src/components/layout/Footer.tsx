@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="mt-[120px]">
       <Container>
-        <div className="flex justify-between">
+        <div className="flex justify-between max-md:flex-col">
           <div className="flex justify-center flex-col gap-9">
             <Link
               href="/"
@@ -44,7 +44,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-10 max-md:mt-10">
             <div className="flex  flex-col gap-5">
               <p className="text-base text-[#666666] leading-5 ">Company</p>
               <div className="flex  flex-col justify-center gap-2">
@@ -144,8 +144,8 @@ const Footer = () => {
       <hr className="border-border-disabled mt-4" />
       {/* Todo: Add company name */}
       <Container>
-        <div className="flex justify-between items-center">
-          <p>
+        <div className="flex md:justify-between max-md:flex-col max-md:gap-2 md:items-center ">
+          <p className="text-base text-text-body leading-5 font-normal ">
             &copy; {new Date().getFullYear()} Company name Inc. All right
             reserved
           </p>
