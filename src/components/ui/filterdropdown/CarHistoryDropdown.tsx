@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
-import ExpendableMenu from "../pills/ExpendableMenu";
-import Label from "../Label";
-import Input from "../Input";
-import Toggle from "../Toggle";
+
+import dynamic from "next/dynamic";
+
+const ExpendableMenu = dynamic(() => import("../pills/ExpendableMenu"), {
+  ssr: false,
+});
+
+const Input = dynamic(() => import("../Input"), {
+  ssr: false,
+});
+const Label = dynamic(() => import("../Label"), {
+  ssr: false,
+});
+const Toggle = dynamic(() => import("../Toggle"), { ssr: false });
 
 interface CarHistoryDropdownProps {
   openDropdownTag: string | null;

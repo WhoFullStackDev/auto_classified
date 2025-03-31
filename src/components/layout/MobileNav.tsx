@@ -4,11 +4,20 @@ import Link from "next/link";
 import { FiBell, FiHeart, FiMenu, FiX } from "react-icons/fi";
 import { navLinks } from "@/constants/navLink";
 import Button from "../ui/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <nav className="bg-surface_primary h-14 shrink-0 shadow-lg md:hidden">
@@ -53,16 +62,19 @@ const MobileNav = () => {
           )}
         >
           <div
-            className="w-full absolute h-full bg-black opacity-35"
+            className={`w-full fixed h-full bg-black opacity-35 inset-0 z-10 transition-all ${
+              isScrolled ? "top-0" : "top-14"
+            }`}
             onClick={() => setIsMenuOpen((prev) => !prev)}
           />
-          <Container>
+          <Container className="z-20">
             <div className=" items-center gap-5 bg-surface_primary rounded-xl h-[300px] flex flex-col justify-center p-4">
               {navLinks.map((navItem, index) => (
                 <Link
                   href={navItem.path}
                   className="text-base text-text-body hover:text-text-hover font-medium focus:text-text-action"
                   key={index}
+                  onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
                   {navItem.name}
                 </Link>

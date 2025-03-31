@@ -1,9 +1,15 @@
 "use client";
-import Toggle from "./Toggle";
-import Input from "./Input";
-import Label from "./Label";
 import { IconType } from "react-icons";
 import { ReactElement, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Input = dynamic(() => import("./Input"), {
+  ssr: false,
+});
+const Label = dynamic(() => import("./Label"), {
+  ssr: false,
+});
+const Toggle = dynamic(() => import("./Toggle"), { ssr: false });
 
 export type OptionsType = {
   label: string;

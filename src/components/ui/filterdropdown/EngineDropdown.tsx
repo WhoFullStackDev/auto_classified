@@ -1,5 +1,12 @@
-import FilterCheckBoxOption, { OptionsType } from "../FilterCheckBoxOption";
-import ExpendableMenu from "../pills/ExpendableMenu";
+import dynamic from "next/dynamic";
+import { OptionsType } from "../FilterCheckBoxOption";
+
+const ExpendableMenu = dynamic(() => import("../pills/ExpendableMenu"), {
+  ssr: false,
+});
+const FilterCheckBoxOption = dynamic(() => import("../FilterCheckBoxOption"), {
+  ssr: false,
+});
 
 const EngineOption: OptionsType[] = [
   { label: "Electric", quantity: 14166 },
