@@ -1,9 +1,17 @@
 "use client";
-import FilterPill from "../FilterPill";
-import Input from "../Input";
-import Label from "../Label";
 import { useForm } from "react-hook-form";
 import { MdFormatListBulleted } from "react-icons/md";
+import dynamic from "next/dynamic";
+
+const FilterPill = dynamic(() => import("../FilterPill"), {
+  ssr: false,
+});
+const Input = dynamic(() => import("../Input"), {
+  ssr: false,
+});
+const Label = dynamic(() => import("../Label"), {
+  ssr: false,
+});
 
 const ModelPill = () => {
   const { register } = useForm();

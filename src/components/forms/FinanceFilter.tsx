@@ -39,14 +39,14 @@ const FinanceFilter = () => {
   const startMillage = watch("startMillage");
   const endMillage = watch("endMillage");
   return (
-    <form className="flex flex-col gap-4 justify-center ">
+    <form className="flex flex-col gap-4 justify-center max-lg:mt-4 ">
       <div>
         <Label title="Monthly payment" htmlFor="monthlyPayment" />
         <Input
           {...register("monthlyPayment")}
           placeholder="500"
           type="tel"
-          className="w-[300px]"
+          className="lg:w-[300px] w-[240px]"
         />
       </div>
       <div>
@@ -55,13 +55,13 @@ const FinanceFilter = () => {
           {...register("downPayment")}
           placeholder="3000"
           type="tel"
-          className="w-[300px]"
+          className="lg:w-[300px] w-[240px]"
         />
       </div>
       <div>
         <Label title="Credit score" htmlFor="creditScore" />
         <Option
-          className="border-2 rounded-sm w-[300px]"
+          className="border-2 rounded-sm lg:w-[300px] w-[240px]"
           optionData={creditScore}
           {...register("creditScore")}
           ariaLabelledby="credit"
@@ -70,7 +70,7 @@ const FinanceFilter = () => {
       <div>
         <Label title="Term length" htmlFor="loanTerms" />
         <Option
-          className="border-2 rounded-sm w-[300px]"
+          className="border-2 rounded-sm lg:w-[300px] w-[240px]"
           optionData={loneTerm}
           {...register("loanTerms")}
           ariaLabelledby="Loan"
@@ -89,7 +89,7 @@ const FinanceFilter = () => {
         ariaLabel="buying-power"
         label="Shop by buying power"
         type="button"
-        className="w-[300px]"
+        className="lg:w-[300px] w-[240px]"
       />
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -115,7 +115,7 @@ const FinanceFilter = () => {
           <Input
             placeholder="0"
             type="tel"
-            className="w-[120px] border-2"
+            className="lg:w-[120px] w-[90px] border-2"
             {...register("startMillage")}
             value={startMillage}
           />
@@ -125,7 +125,7 @@ const FinanceFilter = () => {
           <Input
             placeholder="0"
             type="tel"
-            className="w-[120px] border-2"
+            className="lg:w-[120px] w-[90px] border-2"
             {...register("endMillage")}
             value={endMillage}
           />

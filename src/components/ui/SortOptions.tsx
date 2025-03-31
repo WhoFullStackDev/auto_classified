@@ -13,7 +13,7 @@ const SortOptions = () => {
       <select
         {...register("sort")}
         id="sortOptions"
-        className="cursor-pointer px-2 appearance-none w-[186px] outline-border-hover"
+        className="cursor-pointer px-2 appearance-none w-[136px] outline-border-hover"
         aria-labelledby="sort"
       >
         <option value="best match">Best Match</option>
@@ -32,7 +32,7 @@ const SortOptions = () => {
       <Image
         src="/images/dropdown.svg"
         alt="dropdown"
-        className=" right-0.5 text-gray-500 pointer-events-none absolute top-1/4 -translate-x-1/2"
+        className=" right-0.5 text-gray-500 pointer-events-none absolute top-1/6 -translate-x-1/2"
         width={10}
         height={15}
         priority

@@ -1,7 +1,14 @@
-import ExpendableMenu from "../pills/ExpendableMenu";
-import FilterCheckBoxOption, { OptionsType } from "../FilterCheckBoxOption";
+import dynamic from "next/dynamic";
+import { OptionsType } from "../FilterCheckBoxOption";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { MdDone } from "react-icons/md";
+
+const ExpendableMenu = dynamic(() => import("../pills/ExpendableMenu"), {
+  ssr: false,
+});
+const FilterCheckBoxOption = dynamic(() => import("../FilterCheckBoxOption"), {
+  ssr: false,
+});
 
 const PriceRatingOption: OptionsType[] = [
   {

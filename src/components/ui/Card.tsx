@@ -7,7 +7,7 @@ import { TbManualGearbox } from "react-icons/tb";
 
 const Card = () => {
   return (
-    <div className="w-[295px] h-[314px] bg-surface_primary rounded-xl relative shadow-lg overflow-hidden  cursor-pointer">
+    <div className="md:w-[295px] h-[314px] w-full bg-surface_primary rounded-xl relative shadow-lg overflow-hidden  cursor-pointer">
       <div className="absolute w-fit h-fit justify-center items-center flex px-2  bg-surface_primary rounded-lg  top-3 left-3 z-[1]">
         <small className="text-text-body">Sponsor</small>
       </div>
@@ -24,7 +24,7 @@ const Card = () => {
         <FiShare className="text-icon-primary" />
       </button>
       <Link href="/">
-        <div className="relative w-[295px] h-[197px]">
+        <div className="relative md:w-[295px] h-[197px] w-full">
           <Image
             src="/images/Honda.avif"
             alt="Honda"
@@ -62,7 +62,7 @@ const Card = () => {
               <small className="text-text-body">Excellent Price</small>
             </div>
           </div>
-          <div className="flex gap-3 items-center">
+          <div className="flex justify-between items-center">
             <div className="flex items-center gap-1">
               <FiCalendar className="w-5 h-5 shrink-0 text-text-body" />
               <p className="font-normal text-base text-text-body leading-6">
@@ -78,7 +78,7 @@ const Card = () => {
             <div className="flex items-center gap-1">
               <TbManualGearbox className="w-5 h-5 shrink-0 text-text-body" />
               <p className="font-normal text-base text-text-body leading-6">
-                Auto
+                Automatic
               </p>
             </div>
           </div>

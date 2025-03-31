@@ -3,10 +3,11 @@ import { FiFilter } from "react-icons/fi";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
-const FuelDropdown = dynamic(() => import("../filterdropdown/FuelDropdown"), {
+const MobileFilterPill = dynamic(() => import("../MobileFilterPill"), {
   ssr: false,
 });
-const FilterPill = dynamic(() => import("../FilterPill"), {
+
+const FuelDropdown = dynamic(() => import("../filterdropdown/FuelDropdown"), {
   ssr: false,
 });
 const CarHistoryDropdown = dynamic(
@@ -69,10 +70,11 @@ const InteriorColorDropDown = dynamic(
 const PriceRating = dynamic(() => import("../filterdropdown/PriceRating"), {
   ssr: false,
 });
-const MoreFilterPill = () => {
+
+const MobileMoreFilterPill = () => {
   const [openDropdownTag, setOpenDropdownTag] = useState<string | null>(null);
   return (
-    <FilterPill Icon={FiFilter} title="Filters">
+    <MobileFilterPill Icon={FiFilter} title="Filters">
       <div className="h-[300px] overflow-y-auto justify-start">
         <FuelDropdown
           openDropdownTag={openDropdownTag}
@@ -119,8 +121,8 @@ const MoreFilterPill = () => {
           setOpenDropdownTag={setOpenDropdownTag}
         />
       </div>
-    </FilterPill>
+    </MobileFilterPill>
   );
 };
 
-export default MoreFilterPill;
+export default MobileMoreFilterPill;

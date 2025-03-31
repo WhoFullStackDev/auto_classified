@@ -1,16 +1,14 @@
 "use client";
-
-import { useForm } from "react-hook-form";
-import { dataStructure } from "../Option";
 import { MdOutlineDirectionsCar } from "react-icons/md";
+import { dataStructure } from "../Option";
+import { useForm } from "react-hook-form";
 import dynamic from "next/dynamic";
 
-const FilterPill = dynamic(() => import("../FilterPill"), {
+const MobileFilterPill = dynamic(() => import("../MobileFilterPill"), {
   ssr: false,
 });
 
 const Option = dynamic(() => import("../Option"), { ssr: false });
-
 const BodyType: dataStructure[] = [
   { label: "Conversable", value: "Conversable" },
   {
@@ -25,22 +23,20 @@ const BodyType: dataStructure[] = [
   { label: "Wagon", value: "Wagon" },
   { label: "Unknown", value: "Unknown" },
 ];
-const BodyPill = () => {
+const MobileBody = () => {
   const { register } = useForm();
   return (
-    <FilterPill Icon={MdOutlineDirectionsCar} title="Body">
-      <div className="flex justify-center items-center gap-4">
-        <Option
-          ariaLabelledby="Body Type"
-          optionData={BodyType}
-          {...register("start-year")}
-          className="border-2 rounded-md w-[300px]"
-          defaultOPtionNeed
-          defaultOptionText="All"
-        />
-      </div>
-    </FilterPill>
+    <MobileFilterPill Icon={MdOutlineDirectionsCar} title="Body">
+      <Option
+        ariaLabelledby="Body Type"
+        optionData={BodyType}
+        {...register("start-year")}
+        className="border-2 rounded-md w-[240px]"
+        defaultOPtionNeed
+        defaultOptionText="All"
+      />
+    </MobileFilterPill>
   );
 };
 
-export default BodyPill;
+export default MobileBody;
