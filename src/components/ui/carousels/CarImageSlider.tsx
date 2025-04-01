@@ -10,15 +10,7 @@ import Image from "next/image";
 import { A11y, Keyboard, Navigation, FreeMode, Thumbs } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { FiHeart, FiShare2 } from "react-icons/fi";
-import dynamic from "next/dynamic";
-
-const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
-  ssr: false,
-});
-const SwiperSlide = dynamic(
-  () => import("swiper/react").then((mod) => mod.SwiperSlide),
-  { ssr: false }
-);
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const CarImageSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
@@ -50,7 +42,7 @@ const CarImageSlider = () => {
   }, []);
 
   return (
-    <div className=" relative w-[610px] mt-10">
+    <div className=" relative md:w-[610px] w-full md:mt-10 mt-5">
       <button
         className="absolute w-10 h-10 justify-center items-center flex p-2  bg-surface_primary rounded-full  top-3 right-3 cursor-pointer z-[2]"
         aria-label="like"
@@ -78,13 +70,13 @@ const CarImageSlider = () => {
         keyboard={true}
         modules={[FreeMode, Keyboard, A11y, Navigation, Thumbs]}
         style={{ marginBottom: "20px" }}
-        className="w-[610px]! h-[370px]! "
+        className="md:w-[610px]! w-full h-[370px]! "
       >
         <SwiperSlide
           key={1}
           tabIndex={0}
           aria-label={`Slide ${1}`}
-          className="w-[610px]! h-[370px]! overflow-hidden rounded-xl "
+          className="md:w-[610px]! w-full h-[370px]! overflow-hidden rounded-xl "
         >
           <Image
             src="/images/Hondai.avif"
@@ -92,14 +84,14 @@ const CarImageSlider = () => {
             fill
             priority
             sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            className="object-cover"
+            style={{ objectFit: "cover", position: "absolute" }}
           />
         </SwiperSlide>
         <SwiperSlide
           key={2}
           tabIndex={0}
           aria-label={`Slide ${2}`}
-          className="w-[610px]! h-[370px]! overflow-hidden rounded-xl"
+          className="md:w-[610px]! w-full h-[370px]! overflow-hidden rounded-xl"
         >
           <Image
             src="/images/sedan.avif"
@@ -107,7 +99,7 @@ const CarImageSlider = () => {
             fill
             priority
             sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            className="object-cover"
+            style={{ objectFit: "cover", position: "absolute" }}
           />
         </SwiperSlide>
       </Swiper>
@@ -124,98 +116,25 @@ const CarImageSlider = () => {
         }}
         modules={[FreeMode, Navigation, Keyboard, A11y, Thumbs]}
         keyboard={true}
-        className="w-[610px]! aspect-[610/43] "
+        className="md:w-[610px]! w-full md:aspect-[610/43] overflow-x-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden "
       >
-        <SwiperSlide
-          key={1}
-          tabIndex={0}
-          aria-label={`Thumbnail ${1}`}
-          className="w-[85px]! h-[43px]!  overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          key={2}
-          tabIndex={0}
-          aria-label={`Thumbnail ${2}`}
-          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          key={3}
-          tabIndex={0}
-          aria-label={`Thumbnail ${3}`}
-          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          key={4}
-          tabIndex={0}
-          aria-label={`Thumbnail ${4}`}
-          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          key={5}
-          tabIndex={0}
-          aria-label={`Thumbnail ${5}`}
-          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide
-          key={6}
-          tabIndex={0}
-          aria-label={`Thumbnail ${6}`}
-          className="w-[85px] aspect-[85/43] overflow-hidden rounded-xl"
-        >
-          <Image
-            src="/images/Hondai.avif"
-            alt="Hondai"
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
-            fill
-            priority
-            className="object-cover"
-          />
-        </SwiperSlide>
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
+          <SwiperSlide
+            key={value}
+            tabIndex={0}
+            aria-label={`Thumbnail ${value}`}
+            className="w-[85px]! h-[43px]!  overflow-hidden rounded-xl relative"
+          >
+            <Image
+              src="/images/Hondai.avif"
+              alt="Hondai"
+              sizes="(max-width: 640px) 640px, (max-width: 1024px) 750px, 100vw"
+              fill
+              priority
+              style={{ objectFit: "cover", position: "absolute" }}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

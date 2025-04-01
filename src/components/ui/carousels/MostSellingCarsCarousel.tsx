@@ -9,19 +9,11 @@ import { truncateText } from "@/lib/truncateText";
 import { FiCalendar } from "react-icons/fi";
 import { SlSpeedometer } from "react-icons/sl";
 import { TbManualGearbox } from "react-icons/tb";
-import dynamic from "next/dynamic";
-
-const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
-  ssr: false,
-});
-const SwiperSlide = dynamic(
-  () => import("swiper/react").then((mod) => mod.SwiperSlide),
-  { ssr: false }
-);
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const MostSellingCarsCarousel = () => {
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -44,7 +36,7 @@ const MostSellingCarsCarousel = () => {
         {/* TODO: Add skeleton, blur*/}
         {[1, 2, 3, 4, 5].map((num) => (
           <SwiperSlide
-            className="md:w-[400px]! md:h-[400px]! h-[280px]! w-[335px]! relative rounded-lg group overflow-hidden cursor-pointer shadow-lg md:aspect-square aspect-[280/335]"
+            className="md:w-[400px]! md:h-[400px]! h-[280px]! w-full! relative rounded-lg group overflow-hidden cursor-pointer shadow-lg md:aspect-square aspect-[280/335]"
             key={num}
             tabIndex={0}
             aria-label={`Slide ${num}`}

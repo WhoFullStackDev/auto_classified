@@ -31,16 +31,16 @@ const Pricing = () => {
     terms: watch("loanTerms"),
   });
   return (
-    <div>
+    <div className="w-full">
       <h2 className="text-text-heading text-2.5xl font-bold leading-9 ">
         Price
       </h2>
-      <p className="font-medium text-base leading-5 pt-2 w-[400px] text-text-body">
+      <p className="font-medium text-base leading-5 pt-2 md:w-[400px] w-full text-text-body">
         Estimate payments, add your trade-in, and calculate your out-the-door
         price
       </p>
-      <div className="flex flex-col justify-center gap-3 mt-5">
-        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
+      <div className="flex flex-col justify-center gap-3 mt-5 w-full">
+        <div className="md:w-[610px] w-full h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
           <div className="flex items-center gap-3">
             <input
               type="radio"
@@ -57,7 +57,7 @@ const Pricing = () => {
             $17,890
           </h3>
         </div>
-        <div className="w-[610px] h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
+        <div className="md:w-[610px] w-full h-[54px]  bg-surface_primary  shadow-lg flex justify-between items-center rounded-xl p-5 ">
           <div className="flex items-center gap-3">
             <input
               type="radio"
@@ -81,8 +81,8 @@ const Pricing = () => {
         </div>
 
         {pickPriceOption === "finance" && (
-          <div>
-            <div className="w-[610px] h-[156px] bg-surface_primary shadow-lg rounded-xl p-6 flex flex-col justify-center items-center gap-2">
+          <div className="w-full">
+            <div className="md:w-[610px] w-full h-[156px] bg-surface_primary shadow-lg rounded-xl p-6 flex flex-col justify-center items-center gap-2">
               <Label
                 title="Your estimated payment* is"
                 className="inline"
@@ -101,7 +101,7 @@ const Pricing = () => {
               </p>
             </div>
 
-            <div className="w-[610px]  bg-surface_primary  shadow-lg h-[460px] rounded-xl p-8 mt-5">
+            <div className="md:w-[610px] w-full  bg-surface_primary  shadow-lg h-[460px] rounded-xl p-8 mt-5">
               <h3 className="text-xl leading-7 text-text-heading font-bold">
                 Select your finance terms
               </h3>
@@ -113,7 +113,7 @@ const Pricing = () => {
                     {...register("monthlyPayment")}
                     placeholder="500"
                     type="tel"
-                    className="w-[546px]"
+                    className="md:w-[546px] w-full"
                   />
                 </div>
                 <div className="flex flex-col justify-center gap-2">
@@ -122,13 +122,13 @@ const Pricing = () => {
                     {...register("downPayment")}
                     placeholder="3000"
                     type="tel"
-                    className="w-[546px]"
+                    className="md:w-[546px] w-full"
                   />
                 </div>
                 <div className="flex flex-col justify-center gap-2">
                   <Label title="Credit score" htmlFor="creditScore" />
                   <Option
-                    className="border-2 rounded-sm w-[546px]"
+                    className="border-2 rounded-sm md:w-[546px] w-full"
                     optionData={creditScore}
                     {...register("creditScore")}
                     ariaLabelledby="credit"
@@ -137,7 +137,7 @@ const Pricing = () => {
                 <div className="flex flex-col justify-center gap-2">
                   <Label title="Term length" htmlFor="loanTerms" />
                   <Option
-                    className="border-2 rounded-sm w-[546px]"
+                    className="border-2 rounded-sm md:w-[546px] w-full"
                     optionData={loneTerm}
                     {...register("loanTerms")}
                     ariaLabelledby="Loan"

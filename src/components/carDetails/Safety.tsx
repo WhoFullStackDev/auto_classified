@@ -21,7 +21,7 @@ const Safety = () => {
           </div>
         </div>
       </div>
-      <div className="mt-3 flex gap-20">
+      <div className="mt-3 flex md:gap-20 gap-3 max-md:flex-col">
         <div className="flex flex-col gap-3">
           <p className="font-medium text-base leading-5 text-text-body">
             ABS Brakes

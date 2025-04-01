@@ -4,7 +4,7 @@ const Overview = () => {
       <h2 className="text-text-heading text-2.5xl font-bold leading-9 ">
         Overview
       </h2>
-      <div className="mt-4 flex gap-17">
+      <div className="mt-4 flex justify-between w-full max-md:flex-col">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-1">
             <p className="font-medium text-lg leading-6 text-text-body">

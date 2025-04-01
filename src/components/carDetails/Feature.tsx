@@ -10,7 +10,7 @@ const Feature = () => {
       <h2 className="text-text-heading text-2.5xl font-bold leading-9 ">
         Feature
       </h2>
-      <div className="mt-4 flex gap-6">
+      <div className="mt-4 flex  justify-between w-full max-md:flex-col">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-1">
             <SlSpeedometer size={24} className="text-icon-primary" />

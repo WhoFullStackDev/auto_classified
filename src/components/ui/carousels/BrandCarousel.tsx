@@ -5,15 +5,7 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import { A11y, Keyboard } from "swiper/modules";
-import dynamic from "next/dynamic";
-
-const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
-  ssr: false,
-});
-const SwiperSlide = dynamic(
-  () => import("swiper/react").then((mod) => mod.SwiperSlide),
-  { ssr: false }
-);
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const BrandCarousel = () => {
   return (
