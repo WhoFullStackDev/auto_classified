@@ -9,7 +9,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 
 const TestimonialCarousel = () => {
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -19,6 +19,9 @@ const TestimonialCarousel = () => {
         }}
         breakpoints={{
           768: {
+            slidesPerView: 2,
+          },
+          1280: {
             slidesPerView: 3,
           },
         }}

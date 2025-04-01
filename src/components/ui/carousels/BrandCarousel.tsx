@@ -9,11 +9,11 @@ import { SwiperSlide, Swiper } from "swiper/react";
 
 const BrandCarousel = () => {
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={2}
-        className="h-[210px] mt-10"
+        className="h-[210px] mt-10 w-full"
         a11y={{
           enabled: true,
 
@@ -21,7 +21,7 @@ const BrandCarousel = () => {
         }}
         breakpoints={{
           768: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
         }}
         modules={[A11y, Keyboard]}

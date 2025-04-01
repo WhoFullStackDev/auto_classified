@@ -7,10 +7,10 @@ import CarPriceCalculator from "../forms/CarPriceCalculator";
 const CarPriceEstimator = async () => {
   return (
     <Container>
-      <div className="mt-[120px] flex max-md:flex-col justify-center items-center gap-[120px]">
+      <div className="mt-[120px] flex max-xl:flex-col justify-center items-center gap-[120px]">
         <div>
-          <Heading text="Estimate your budget" className="max-md:text-center" />
-          <p className="text-text-body text-base font-normal leading-6 self-stretch md:w-[260px] w-full pt-3 max-md:text-center">
+          <Heading text="Estimate your budget" className="max-xl:text-center" />
+          <p className="text-text-body text-base font-normal leading-6 self-stretch xl:w-[260px] w-full pt-3 max-xl:text-center">
             Connect with our nationwide network of certified dealers.
           </p>
           <div className="md:w-[590px] md:h-[334px]  w-full h-[180px] relative mt-3">

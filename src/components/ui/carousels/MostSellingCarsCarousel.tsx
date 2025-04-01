@@ -28,6 +28,9 @@ const MostSellingCarsCarousel = () => {
         keyboard={{ enabled: true }}
         breakpoints={{
           768: {
+            slidesPerView: 2,
+          },
+          1080: {
             slidesPerView: 3,
           },
         }}

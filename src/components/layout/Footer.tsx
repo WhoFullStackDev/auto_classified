@@ -6,10 +6,10 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="mt-[120px]">
+    <footer className="mt-[120px] w-full">
       <Container>
-        <div className="flex justify-between max-md:flex-col">
-          <div className="flex justify-center flex-col gap-9">
+        <div className="flex justify-between max-md:flex-col w-full">
+          <div className="flex justify-center flex-col gap-9 w-full">
             <Link
               href="/"
               className="font-black text-2xl inline w-28 outline-none focus:ring-2 focus:ring-offset-2  focus:ring-border-focus rounded-md"
@@ -44,7 +44,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex gap-10 max-md:mt-10">
+          <div className="flex md:gap-10 justify-between max-md:mt-10 w-full">
             <div className="flex  flex-col gap-5">
               <p className="text-base text-[#666666] leading-5 ">Company</p>
               <div className="flex  flex-col justify-center gap-2">
@@ -144,12 +144,12 @@ const Footer = () => {
       <hr className="border-border-disabled mt-4" />
       {/* Todo: Add company name */}
       <Container>
-        <div className="flex md:justify-between max-md:flex-col max-md:gap-2 md:items-center ">
+        <div className="flex md:justify-between max-md:flex-col max-md:gap-2 md:items-center w-full">
           <p className="text-base text-text-body leading-5 font-normal ">
             &copy; {new Date().getFullYear()} Company name Inc. All right
             reserved
           </p>
-          <div className="flex item-center gap-5">
+          <div className="flex item-center md:gap-5 w-full justify-between">
             <Link
               href="/"
               className="text-base text-text-body leading-5 outline-none focus:ring-2 focus:ring-offset-2 hover:text-text-hover focus:text-text-hover focus:ring-border-focus rounded-md"
