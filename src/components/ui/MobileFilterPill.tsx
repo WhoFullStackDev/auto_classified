@@ -40,7 +40,7 @@ const MobileFilterPill: React.FC<MobileFilterPillProps> = ({
             className="fixed inset-0 bg-black opacity-20 z-10"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           />
-          <div className="w-[280px] bg-surface_primary p-5  z-20 relative rounded-xl">
+          <div className="w-[80%] bg-surface_primary p-5  z-20 relative rounded-xl">
             <FiX
               size={24}
               className="text-icon-primary bg-[#FFDBDB] rounded-full absolute right-5 top-5"

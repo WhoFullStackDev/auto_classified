@@ -16,8 +16,8 @@ import MobileMoreFilterPill from "../ui/mobilePills/MobileMoreFilterPill";
 
 const Filter = () => {
   return (
-    <div className="flex justify-between max-lg:flex-col items-center md:mt-10 mt-3 mb-3 ">
-      <div className="flex items-center gap-2 max-lg:hidden">
+    <div className="flex justify-between max-xl:flex-col items-center md:mt-10 mt-3 mb-3 ">
+      <div className="flex items-center gap-2 max-xl:hidden">
         <PricePill />
         <BodyPill />
         <LocationPill />
@@ -26,11 +26,11 @@ const Filter = () => {
         <ModelPill />
         <MoreFilterPill />
       </div>
-      <div className=" flex gap-2 max-lg:hidden">
+      <div className=" flex gap-2 max-xl:hidden">
         <p className="text-base text-[#444444] font-normal pb-3 ">Sort By</p>
         <SortOptions />
       </div>
-      <div className="lg:hidden flex gap-2 overflow-x-scroll overflow-y-hidden w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden py-1 bg-surface_page">
+      <div className="xl:hidden flex gap-2 overflow-x-scroll overflow-y-hidden w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden py-1 bg-surface_page">
         <MobilePricePill />
         <MobileBodyPill />
         <MobileLocationPill />
@@ -40,7 +40,7 @@ const Filter = () => {
         <MobileMoreFilterPill />
       </div>
       <div
-        className="lg:hidden w-full justify-between 
+        className="xl:hidden w-full justify-between 
       flex mt-3"
       >
         <p className="text-base text-text-body font-normal ">

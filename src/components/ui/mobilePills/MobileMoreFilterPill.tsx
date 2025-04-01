@@ -75,7 +75,7 @@ const MobileMoreFilterPill = () => {
   const [openDropdownTag, setOpenDropdownTag] = useState<string | null>(null);
   return (
     <MobileFilterPill Icon={FiFilter} title="Filters">
-      <div className="h-[300px] overflow-y-auto justify-start">
+      <div className="h-[300px] overflow-y-auto justify-start w-full">
         <FuelDropdown
           openDropdownTag={openDropdownTag}
           setOpenDropdownTag={setOpenDropdownTag}

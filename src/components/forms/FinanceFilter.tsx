@@ -51,7 +51,7 @@ const FinanceFilter = () => {
           {...register("monthlyPayment")}
           placeholder="500"
           type="tel"
-          className="lg:w-[300px] w-[240px]"
+          className="lg:w-[300px] w-full"
         />
       </div>
       <div>
@@ -60,13 +60,13 @@ const FinanceFilter = () => {
           {...register("downPayment")}
           placeholder="3000"
           type="tel"
-          className="lg:w-[300px] w-[240px]"
+          className="lg:w-[300px] w-full"
         />
       </div>
       <div>
         <Label title="Credit score" htmlFor="creditScore" />
         <Option
-          className="border-2 rounded-sm lg:w-[300px] w-[240px]"
+          className="border-2 rounded-sm lg:w-[300px] w-full"
           optionData={creditScore}
           {...register("creditScore")}
           ariaLabelledby="credit"
@@ -75,7 +75,7 @@ const FinanceFilter = () => {
       <div>
         <Label title="Term length" htmlFor="loanTerms" />
         <Option
-          className="border-2 rounded-sm lg:w-[300px] w-[240px]"
+          className="border-2 rounded-sm lg:w-[300px] w-full"
           optionData={loneTerm}
           {...register("loanTerms")}
           ariaLabelledby="Loan"
@@ -94,7 +94,7 @@ const FinanceFilter = () => {
         ariaLabel="buying-power"
         label="Shop by buying power"
         type="button"
-        className="lg:w-[300px] w-[240px]"
+        className="lg:w-[300px] w-full"
       />
       <PriceDropAndMillage
         endMillage={endMillage}

@@ -13,10 +13,11 @@ const MobileLocation = () => {
   return (
     <MobileFilterPill Icon={FiMapPin} title="Location">
       <Input
-        className="flex justify-between items-center bg-[#D9D9D9] w-[240px] shrink-0 h-[40px] rounded-[50px] overflow-hidden px-4 cursor-pointer"
+        className="flex justify-between items-center bg-[#D9D9D9] w-full shrink-0 h-[40px] rounded-[50px] overflow-hidden px-4 cursor-pointer"
         name="search"
         placeholder="Notion Wide"
         type="text"
+        width="w-full"
         RightIcon={FiSearch}
         size={24}
       />

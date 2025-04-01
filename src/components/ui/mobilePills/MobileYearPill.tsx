@@ -22,7 +22,7 @@ const MobileYearPill = () => {
           ariaLabelledby="start year"
           optionData={years}
           {...register("start-year")}
-          className="border-2 rounded-md w-[90px]"
+          className="border-2 rounded-md w-[40%]"
           defaultOPtionNeed
           defaultOptionText="Min"
         />
@@ -33,7 +33,7 @@ const MobileYearPill = () => {
           ariaLabelledby="end year"
           {...register("end-year")}
           optionData={years}
-          className="border-2 rounded-md w-[90px]"
+          className="border-2 rounded-md w-[40%]"
           defaultOPtionNeed
           defaultOptionText="Max"
         />

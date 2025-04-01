@@ -45,7 +45,7 @@ const PriceDropAndMillage: React.FC<PriceDropAndMillageProps> = ({
           <Input
             placeholder="0"
             type="tel"
-            className="lg:w-[120px] w-[90px] border-2"
+            className="lg:w-[120px] w-1/1 border-2"
             {...register("startMillage")}
             value={startMillage}
           />
@@ -55,7 +55,7 @@ const PriceDropAndMillage: React.FC<PriceDropAndMillageProps> = ({
           <Input
             placeholder="0"
             type="tel"
-            className="lg:w-[120px] w-[90px] border-2"
+            className="lg:w-[120px] w-1/1 border-2"
             {...register("endMillage")}
             value={endMillage}
           />
