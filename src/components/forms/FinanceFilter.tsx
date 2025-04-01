@@ -1,14 +1,19 @@
 "use client";
 
-import Label from "../ui/Label";
-import Input from "../ui/Input";
-import Option from "../ui/Option";
-import Button from "../ui/Button";
 import { calculateEstimateBudget, creditScore, loneTerm } from "@/lib/utils";
-import { useForm } from "react-hook-form";
-import RangeSlider from "react-range-slider-input";
+import { useForm, UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { CashFilterFormIFromValue } from "./CashFilterForm";
+import dynamic from "next/dynamic";
 
-interface FinanceFilterIFormValue {
+const Input = dynamic(() => import("../ui/Input"), { ssr: false });
+const Button = dynamic(() => import("../ui/Button"), { ssr: false });
+const Option = dynamic(() => import("../ui/Option"), { ssr: false });
+const Label = dynamic(() => import("../ui/Label"), { ssr: false });
+const PriceDropAndMillage = dynamic(() => import("../ui/PriceDropAndMillage"), {
+  ssr: false,
+});
+
+export interface FinanceFilterIFormValue {
   monthlyPayment: number;
   downPayment: number;
   creditScore: string;
@@ -91,56 +96,20 @@ const FinanceFilter = () => {
         type="button"
         className="lg:w-[300px] w-[240px]"
       />
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <Input
-            name="price-drop"
-            placeholder="price-drop"
-            type="checkbox"
-            className="scale-[1.5] w-3 h-3"
-          />
-          <Label title="Price drop" htmlFor="price-drop" />
-        </div>
-        {/* TODO:Update me */}
-        <p className="text-text-body text-base font-normal leading-6 self-stretch ">
-          30
-        </p>
-      </div>
-      <p className="text-text-body text-base font-normal leading-6 self-stretch ">
-        See vehicles with price drops in the past 30 days
-      </p>
-      <div className="flex justify-center gap-4 flex-col">
-        <Label title="Millage" htmlFor="startMillage" />
-        <div className="justify-between items-center flex gap-2">
-          <Input
-            placeholder="0"
-            type="tel"
-            className="lg:w-[120px] w-[90px] border-2"
-            {...register("startMillage")}
-            value={startMillage}
-          />
-          <p className="text-text-disable text-base font-medium leading-5">
-            To
-          </p>
-          <Input
-            placeholder="0"
-            type="tel"
-            className="lg:w-[120px] w-[90px] border-2"
-            {...register("endMillage")}
-            value={endMillage}
-          />
-        </div>
-        <RangeSlider
-          id="range-slider-green"
-          min={0}
-          max={2000000}
-          value={[startMillage, endMillage]}
-          onInput={(value) => {
-            setValue("startMillage", value[0]);
-            setValue("endMillage", value[1]);
-          }}
-        />
-      </div>
+      <PriceDropAndMillage
+        endMillage={endMillage}
+        startMillage={startMillage}
+        setValue={
+          setValue as UseFormSetValue<
+            FinanceFilterIFormValue | CashFilterFormIFromValue
+          >
+        }
+        register={
+          register as UseFormRegister<
+            CashFilterFormIFromValue | FinanceFilterIFormValue
+          >
+        }
+      />
     </form>
   );
 };
