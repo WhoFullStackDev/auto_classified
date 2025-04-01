@@ -6,7 +6,7 @@ const TopDealers = () => {
   return (
     <Container>
       <div className="mt-[120px] flex flex-col justify-center items-center">
-        <Heading text="Feature Dealers" />
+        <Heading text="Feature Dealers" className="text-center" />
       </div>
       <DealerCarousel />
     </Container>

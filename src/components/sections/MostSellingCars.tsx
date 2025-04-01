@@ -7,8 +7,8 @@ import Heading from "../ui/Heading";
 const MostSellingCars = () => {
   return (
     <Container>
-      <div className="flex justify-center items-center gap-4 pt-[120px]">
-        <Heading text="Top-Selling Cars" className="text-nowrap" />
+      <div className="flex justify-center items-center gap-4 pt-[120px] w-full">
+        <Heading text="Top-Selling Cars" className="text-nowrap text-center" />
         <FiTrendingUp className="w-8 h-8 aspect-square text-success" />
       </div>
 

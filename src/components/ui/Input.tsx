@@ -13,6 +13,7 @@ interface inputProps {
   defaultValue?: number;
   value?: number | string;
   checked?: boolean;
+  width?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -29,10 +30,13 @@ const Input: React.FC<inputProps> = ({
   value,
   size,
   checked,
+  width,
   ...props
 }) => {
   return (
-    <div className="inline-flex justify-center items-center relative ">
+    <div
+      className={cn("inline-flex justify-center items-center relative", width)}
+    >
       {LeftIcon && (
         <LeftIcon className="absolute left-2 top-1/2 transform -translate-y-1/2  text-icon-primary hover:text-icon-action-hover focus:text-icon-action-hover" />
       )}

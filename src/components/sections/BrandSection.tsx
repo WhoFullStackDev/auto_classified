@@ -7,7 +7,10 @@ const BrandSection = () => {
   return (
     <Container>
       <div className="flex justify-center items-center">
-        <Heading text="Shop your favourite brand" className="mt-[120px]" />
+        <Heading
+          text="Shop your favourite brand"
+          className="mt-[120px] text-center"
+        />
       </div>
       <BrandCarousel />
     </Container>

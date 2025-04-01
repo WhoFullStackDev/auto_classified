@@ -9,7 +9,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 
 const DealerCarousel = () => {
   return (
-    <div>
+    <div className="w-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={2}
@@ -20,7 +20,7 @@ const DealerCarousel = () => {
         }}
         breakpoints={{
           768: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
         }}
         modules={[A11y, Keyboard]}

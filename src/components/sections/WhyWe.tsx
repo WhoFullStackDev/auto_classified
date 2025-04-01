@@ -8,10 +8,10 @@ const WhyWe = async () => {
   return (
     <Container>
       <div className="h-full flex justify-center items-center flex-col gap-5">
-        <Heading text="Why We?" className="mt-[120px]" />
-        <div className="md:w-[1240px] md:h-[410px] h-[700px] w-full rounded-xl border-2 border-white bg-[linear-gradient(96deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 100%)] mt-10 flex max-md:flex-col justify-center items-center md:gap-[120px] gap-8 backdrop-blur-xl">
+        <Heading text="Why We?" className="mt-[120px] text-center" />
+        <div className="xl:w-[1240px] md:h-[410px] h-[700px] w-full rounded-xl border-2 border-white bg-[linear-gradient(96deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 100%)] mt-10 flex max-md:flex-col  items-center xl:justify-between justify-between backdrop-blur-xl p-4">
           <div className="w-[250px] flex flex-col items-center gap-5 ">
-            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative">
+            <div className="xl:[w-196px] xl:h-[130px] w-[100px] h-[70px] max-xl:aspect-[10/7] relative">
               <Image
                 src="/images/transparent-pricing.svg"
                 alt="transparent-pricing "
@@ -25,7 +25,7 @@ const WhyWe = async () => {
               />
             </div>
 
-            <h2 className="text-text-heading text-center md:text-2.5xl text-2xl font-bold md:leading-9 leading-8 text-nowrap">
+            <h2 className="text-text-heading text-center xl:text-2.5xl text-2xl font-bold xl:leading-9 leading-8 text-nowrap">
               Transparent pricing
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
@@ -33,7 +33,7 @@ const WhyWe = async () => {
             </p>
           </div>
           <div className="w-[250px] flex flex-col items-center gap-5">
-            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative">
+            <div className="xl:[w-196px] xl:h-[130px] w-[100px] h-[70px] max-xl:aspect-[10/7] relative">
               <Image
                 src="/images/minutes-not-hours.svg"
                 alt="minutes-not-hours"
@@ -46,7 +46,7 @@ const WhyWe = async () => {
                 }}
               />
             </div>
-            <h2 className="text-text-heading text-center font-bold md:leading-9 leading-8 md:text-2.5xl text-2xl">
+            <h2 className="text-text-heading text-center font-bold xl:leading-9 leading-8 xl:text-2.5xl text-2xl">
               Minutes, not hours
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
@@ -54,7 +54,7 @@ const WhyWe = async () => {
             </p>
           </div>
           <div className="w-[250px] flex flex-col items-center gap-5">
-            <div className="md:[w-196px] md:h-[130px] w-[100px] h-[70px] max-md:aspect-[10/7] relative ">
+            <div className="xl:[w-196px] xl:h-[130px] w-[100px] h-[70px] max-xl:aspect-[10/7] relative ">
               <Image
                 src="/images/shop-your-way.svg"
                 alt="shop-your-way"
@@ -67,7 +67,7 @@ const WhyWe = async () => {
                 }}
               />
             </div>
-            <h2 className="text-text-heading text-center font-bold md:leading-9 leading-8 md:text-2.5xl text-2xl">
+            <h2 className="text-text-heading text-center font-bold xl:leading-9 leading-8 xl:text-2.5xl text-2xl">
               Shop your way
             </h2>
             <p className="text-text-body text-base font-normal leading-6 self-stretch text-center">
