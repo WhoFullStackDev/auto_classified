@@ -5,11 +5,20 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import { SwiperClass } from "swiper/react";
 import Image from "next/image";
 import { A11y, Keyboard, Navigation, FreeMode, Thumbs } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { FiHeart, FiShare2 } from "react-icons/fi";
+import dynamic from "next/dynamic";
+
+const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
+  ssr: false,
+});
+const SwiperSlide = dynamic(
+  () => import("swiper/react").then((mod) => mod.SwiperSlide),
+  { ssr: false }
+);
 
 const CarImageSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);

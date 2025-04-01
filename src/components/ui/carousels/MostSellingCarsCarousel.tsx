@@ -3,13 +3,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/a11y";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Keyboard, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { truncateText } from "@/lib/truncateText";
 import { FiCalendar } from "react-icons/fi";
 import { SlSpeedometer } from "react-icons/sl";
 import { TbManualGearbox } from "react-icons/tb";
+import dynamic from "next/dynamic";
+
+const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
+  ssr: false,
+});
+const SwiperSlide = dynamic(
+  () => import("swiper/react").then((mod) => mod.SwiperSlide),
+  { ssr: false }
+);
 
 const MostSellingCarsCarousel = () => {
   return (
