@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "relative mx-auto max-w-7xl flex flex-col justify-between md:px-5 px-4",
+        "relative mx-auto max-w-7xl flex flex-col justify-between px-5",
         className
       )}
     >

@@ -12,9 +12,9 @@ import { RiVerifiedBadgeLine } from "react-icons/ri";
 
 const CarSidebarInfo = () => {
   return (
-    <div className=" mt-10 w-[360px] relative aspect-[340/2760]">
+    <div className=" mt-10 w-[360px] relative min-h-screen max-lg:hidden">
       <div className="sticky top-10 left-0 flex flex-col justify-center gap-7">
-        <div className="bg-surface_primary shadow-lg rounded-xl w-[340px] h-[230px] p-5 flex flex-col justify-center gap-3">
+        <div className="bg-surface_primary shadow-lg rounded-xl w-full h-[230px] p-5 flex flex-col justify-center gap-3">
           <div className="flex gap-1 items-center">
             <h2 className="text-2.5xl leading-9 font-bold text-text-heading">
               $17,000
@@ -69,10 +69,10 @@ const CarSidebarInfo = () => {
             type="button"
             ariaLabel="schedule"
             label="Schedule appointment"
-            className="w-[300px]"
+            className="w-full"
           />
         </div>
-        <div className="bg-surface_primary shadow-lg rounded-xl w-[340px] h-[195px] p-5 flex flex-col justify-center gap-3">
+        <div className="bg-surface_primary shadow-lg rounded-xl w-full h-[230px] p-5 flex flex-col justify-center gap-3">
           <Link
             href="/"
             className="text-base leading-5 font-medium text-text-body underline"

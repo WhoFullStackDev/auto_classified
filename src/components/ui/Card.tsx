@@ -1,13 +1,22 @@
+import { cn } from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
-
 import { FiCalendar, FiHeart, FiShare } from "react-icons/fi";
 import { SlSpeedometer } from "react-icons/sl";
 import { TbManualGearbox } from "react-icons/tb";
 
-const Card = () => {
+interface CardProps {
+  className?: string;
+}
+
+const Card = ({ className }: CardProps) => {
   return (
-    <div className="md:w-[295px] h-[314px] w-full bg-surface_primary rounded-xl relative shadow-lg overflow-hidden  cursor-pointer">
+    <div
+      className={cn(
+        "md:w-[295px] h-[314px] bg-surface_primary rounded-xl relative shadow-lg overflow-hidden  cursor-pointer",
+        className
+      )}
+    >
       <div className="absolute w-fit h-fit justify-center items-center flex px-2  bg-surface_primary rounded-lg  top-3 left-3 z-[1]">
         <small className="text-text-body">Sponsor</small>
       </div>
