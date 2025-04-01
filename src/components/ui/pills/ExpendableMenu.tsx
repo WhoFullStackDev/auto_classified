@@ -16,7 +16,7 @@ const ExpendableMenu: React.FC<ExpendableMenuProps> = ({
   openDropdownTag,
 }) => {
   return (
-    <div className="lg:w-[300px] w-[230px] ">
+    <div className="xl:w-[300px] w-full ">
       <div
         className={`flex justify-between items-center p-3 cursor-pointer`}
         onClick={() => {

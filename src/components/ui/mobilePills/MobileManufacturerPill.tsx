@@ -20,11 +20,11 @@ const MobileManufacturerPill = () => {
       Icon={MdOutlinePrecisionManufacturing}
       title="Manufacturer"
     >
-      <div className="h-[300px] overflow-y-scroll">
+      <div className="h-[300px] overflow-y-scroll ">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
           (value) => (
             <div
-              className="flex justify-between items-center w-[230px] p-3"
+              className="flex justify-between items-center w-full p-3"
               key={value}
             >
               <div className="flex items-center gap-2">

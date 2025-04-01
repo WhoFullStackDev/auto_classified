@@ -21,7 +21,7 @@ const MobileModelPill = () => {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
           (value) => (
             <div
-              className="flex justify-between items-center w-[230px] p-3"
+              className="flex justify-between items-center w-full p-3"
               key={value}
             >
               <div className="flex items-center gap-2">

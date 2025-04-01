@@ -31,7 +31,7 @@ const MobileBody = () => {
         ariaLabelledby="Body Type"
         optionData={BodyType}
         {...register("start-year")}
-        className="border-2 rounded-md w-[240px]"
+        className="border-2 rounded-md w-full"
         defaultOPtionNeed
         defaultOptionText="All"
       />

@@ -35,12 +35,12 @@ const CashFilterForm = () => {
   const endMillage = watch("endMillage");
 
   return (
-    <form className="justify-center flex flex-col gap-4 max-lg:mt-4">
+    <form className="justify-center flex flex-col gap-4 max-xl:mt-4">
       <div className="justify-between items-center flex gap-2">
         <Input
           placeholder="0"
           type="tel"
-          className="lg:w-[120px] w-[90px] border-2"
+          className="lg:w-[120px] w-1/1 border-2"
           {...register("startPrice")}
           value={startPrice}
         />
@@ -48,7 +48,7 @@ const CashFilterForm = () => {
         <Input
           placeholder="0"
           type="tel"
-          className="lg:w-[120px] w-[90px] border-2"
+          className="lg:w-[120px] w-1/1 border-2"
           {...register("endPrice")}
           value={endPrice}
         />
